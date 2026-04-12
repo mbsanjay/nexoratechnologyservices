@@ -52,10 +52,10 @@ export default function About() {
   ];
 
   const team = [
-    { name: "Rajesh Kumar", role: "CEO & Founder", emoji: "👨‍💼" },
-    { name: "Priya Sharma", role: "CTO", emoji: "👩‍💻" },
-    { name: "Ankit Verma", role: "Head of Engineering", emoji: "👨‍🔧" },
-    { name: "Divya Nair", role: "Head of Design", emoji: "👩‍🎨" },
+    { name: "Venkatesh Gothe", role: "CEO & Founder", emoji: "👨‍💼" },
+    { name: "M. B Sanjay", role: "COO", emoji: "👨‍💼" },
+    // { name: "Ankit Verma", role: "Head of Engineering", emoji: "👨‍🔧" },
+    // { name: "Divya Nair", role: "Head of Design", emoji: "👩‍🎨" },
   ];
 
   const tabs = ["Our Mission", "Our Story", "Leadership"];
@@ -341,14 +341,14 @@ export default function About() {
               Founded in 2012, Nexora has grown into a trusted technology partner for 500+ companies across 20+ countries.
             </p>
             {/* Quick Stats Row */}
-            <div className="flex gap-8 flex-wrap">
+            {/* <div className="flex gap-8 flex-wrap">
               {[["500+", "Projects"], ["12+", "Years"], ["50+", "Experts"], ["98%", "Satisfaction"]].map(([n, l], i) => (
                 <div key={i} className="fade-up" style={{ animationDelay: `${0.1 + i * 0.1}s` }}>
                   <p className="sora text-2xl text-cyan-200" style={{ fontWeight: 800 }}>{n}</p>
                   <p className="text-blue-200 text-xs uppercase tracking-widest" style={{ opacity: 0.75 }}>{l}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -518,7 +518,7 @@ export default function About() {
       {/* ══════════════════════════════
           TIMELINE — OUR JOURNEY
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
+      {/* <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Our Journey</div>
@@ -528,7 +528,7 @@ export default function About() {
           </div>
 
           <div className="relative">
-            {/* Vertical line — desktop */}
+         
             <div className="hidden md:block timeline-line" />
 
             <div className="space-y-8">
@@ -538,7 +538,7 @@ export default function About() {
                   className={`flex items-start gap-6 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} flex-row`}
                   style={{ animationDelay: `${i * 0.12}s` }}
                 >
-                  {/* Card */}
+                 
                   <div className="flex-1">
                     <div className="timeline-card" style={{ animationDelay: `${i * 0.12}s` }}>
                       <div
@@ -559,19 +559,19 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Center dot */}
+            
                   <div className="hidden md:flex flex-col items-center mt-5 flex-shrink-0">
                     <div className="timeline-dot" />
                   </div>
 
-                  {/* Spacer */}
+              
                   <div className="flex-1 hidden md:block" />
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════
           TEAM
@@ -587,30 +587,29 @@ export default function About() {
               The people behind Nexora's success — experienced, passionate, and driven to deliver.
             </p>
           </div>
+<div className="flex flex-wrap justify-center gap-6">
+  {team.map((m, i) => (
+    <div key={i} className={`team-card fade-up d${i + 1} w-[260px]`}>
+      <div className="team-avatar">{m.emoji}</div>
+      <h4 className="sora text-sm font-700 text-[#1e3a5f] mb-1">
+        {m.name}
+      </h4>
+      <p className="text-xs text-slate-400 uppercase tracking-wide">{m.role}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((m, i) => (
-              <div key={i} className={`team-card fade-up d${i + 1}`}>
-                <div className="team-avatar">{m.emoji}</div>
-                <h4 className="sora text-sm font-700 text-[#1e3a5f] mb-1" style={{ fontWeight: 700 }}>
-                  {m.name}
-                </h4>
-                <p className="text-xs text-slate-400 uppercase tracking-wide">{m.role}</p>
-                {/* Social icons */}
-                <div className="flex justify-center gap-2 mt-4">
-                  {["in", "tw"].map((s) => (
-                    <div
-                      key={s}
-                      className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold cursor-pointer transition-all duration-200 hover:scale-110"
-                      style={{ background: "rgba(26,111,196,0.08)", color: "#1a6fc4" }}
-                    >
-                      {s}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+      <div className="flex justify-center gap-2 mt-4">
+        {["in", "tw"].map((s) => (
+          <div
+            key={s}
+            className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold cursor-pointer hover:scale-110"
+            style={{ background: "rgba(26,111,196,0.08)", color: "#1a6fc4" }}
+          >
+            {s}
           </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 

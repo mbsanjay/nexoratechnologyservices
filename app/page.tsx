@@ -426,7 +426,7 @@ export default function Home() {
       {/* ══════════════════════════════
           STATS BAR
       ══════════════════════════════ */}
-      <section className="w-full py-5 px-4"
+      {/* <section className="w-full py-5 px-4"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 60%, #17b8e0 100%)" }}>
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((s, i) => (
@@ -437,7 +437,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════
           INTRO BANNER
@@ -709,7 +709,7 @@ export default function Home() {
       {/* ══════════════════════════════
           TESTIMONIALS
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
+      {/* <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Testimonials</div>
@@ -731,7 +731,7 @@ export default function Home() {
             ].map((t, i) => (
               <div key={i} className={`testimonial-card fade-up`} style={{ animationDelay: `${i * 0.12}s` }}>
                 <div className="quote-mark">"</div>
-                {/* Stars */}
+             
                 <div className="flex gap-0.5 mb-4">
                   {[...Array(5)].map((_, s) => (
                     <svg key={s} className="w-4 h-4" viewBox="0 0 24 24" fill="#f59e0b">
@@ -756,7 +756,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════════════════
           CTA BANNER
