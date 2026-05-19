@@ -2,94 +2,102 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import img3 from "@/app/Photo/img 3.jpg"; // Replace with your cloud image later
+import img3 from "@/app/Photo/img 3.jpg";
+
+const offerings = [
+  {
+    icon: "🗺️",
+    title: "Cloud Consulting",
+    subtitle: "Services Include",
+    items: [
+      "Cloud readiness assessment",
+      "Cloud strategy & roadmap",
+      "Infrastructure planning",
+      "Cost optimization planning",
+      "Security & compliance consulting",
+    ],
+    desc: "We analyse your business requirements and recommend the right cloud strategy to maximize efficiency, scalability, and ROI.",
+  },
+  {
+    icon: "🚀",
+    title: "Cloud Migration Services",
+    subtitle: "Migration Support For",
+    items: [
+      "On-premise to cloud migration",
+      "Legacy application modernization",
+      "Data migration",
+      "Hybrid cloud setup",
+      "Multi-cloud deployment",
+    ],
+    desc: "Seamlessly migrate your applications, servers, databases, and workloads to the cloud with minimal downtime and maximum security.",
+  },
+  {
+    icon: "⚙️",
+    title: "Cloud Infrastructure Management",
+    subtitle: "Key Features",
+    items: [
+      "24/7 monitoring & support",
+      "Performance optimization",
+      "Backup & disaster recovery",
+      "Server management",
+      "Security management",
+      "Automated scaling",
+    ],
+    desc: "End-to-end cloud infrastructure management to ensure high availability, security, and operational efficiency.",
+  },
+  {
+    icon: "💻",
+    title: "Cloud Application Development",
+    subtitle: "Development Capabilities",
+    items: [
+      "SaaS application development",
+      "Microservices architecture",
+      "API integrations",
+      "Containerization & orchestration",
+      "DevOps implementation",
+    ],
+    desc: "Build modern, scalable, and high-performing cloud-native applications tailored to your business needs.",
+  },
+  {
+    icon: "🔒",
+    title: "Cloud Security Services",
+    subtitle: "Security Solutions Include",
+    items: [
+      "Identity & access management",
+      "Data encryption",
+      "Threat monitoring",
+      "Compliance management",
+      "Security audits",
+      "Disaster recovery planning",
+    ],
+    desc: "Protect your cloud environment with advanced security solutions and industry best practices.",
+  },
+];
+
+const platforms = [
+  { label: "Amazon Web Services (AWS)", color: "#ff9900", icon: "🟠" },
+  { label: "Microsoft Azure", color: "#0089d6", icon: "🔵" },
+  { label: "Google Cloud Platform (GCP)", color: "#4285f4", icon: "🔴" },
+  { label: "Hybrid & Private Cloud Solutions", color: "#17b8e0", icon: "☁️" },
+];
+
+const whyItems = [
+  { icon: "👨‍💻", title: "Experienced Cloud Professionals", desc: "Certified cloud architects and engineers with deep multi-cloud expertise across diverse industries." },
+  { icon: "🎯", title: "Customized Cloud Strategies", desc: "Tailored cloud roadmaps aligned with your unique business goals, workloads, and budget." },
+  { icon: "📈", title: "Scalable & Secure Solutions", desc: "Infrastructure designed to grow with your business while maintaining enterprise-grade security." },
+  { icon: "💰", title: "Cost-Effective Implementation", desc: "Smart resource planning and optimization strategies that deliver maximum ROI on cloud investments." },
+  { icon: "🛡️", title: "End-to-End Support & Maintenance", desc: "From migration through ongoing operations — a single partner for your entire cloud lifecycle." },
+  { icon: "⚡", title: "Faster Deployment & Business Agility", desc: "Agile delivery methods and automation tooling that accelerate your time-to-value in the cloud." },
+];
+
+const cloudMetrics = [
+  { value: "99.99%", label: "Uptime SLA", icon: "⚡" },
+  { value: "35%", label: "Cost Savings", icon: "💰" },
+  { value: "3x", label: "Faster Deploy", icon: "🚀" },
+  { value: "24/7", label: "Monitoring", icon: "🛡️" },
+];
 
 export default function CloudSolutions() {
-  const capabilities = [
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-            d="M8 17l4 4 4-4m-4-5v9M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29" />
-        </svg>
-      ),
-      title: "Cloud Migration & Deployment",
-      desc: "Seamlessly move your workloads, databases, and applications to the cloud with zero downtime strategies.",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      ),
-      title: "Cloud Architecture Design",
-      desc: "Purpose-built cloud architectures that are resilient, scalable, and optimised for your specific workload patterns.",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-        </svg>
-      ),
-      title: "DevOps & Automation",
-      desc: "CI/CD pipelines, infrastructure as code, and automated deployments that accelerate your release velocity.",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      title: "Cloud Security & Monitoring",
-      desc: "End-to-end cloud security posture management, compliance auditing, and 24/7 infrastructure monitoring.",
-    },
-    {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
-      title: "Cost Optimisation",
-      desc: "Right-size your cloud spend with intelligent resource management, reserved instance planning, and waste elimination.",
-    },
-  ];
-
-  const whyItems = [
-    { icon: "☁️", title: "Seamless Migration", desc: "Zero-disruption migration strategies that keep your business running at full speed during transition." },
-    { icon: "📈", title: "Infinite Scale", desc: "Auto-scaling infrastructure that grows with your traffic — pay only for what you actually use." },
-    { icon: "🛡️", title: "Enterprise Security", desc: "Multi-layered cloud security, encryption at rest and in transit, and compliance-ready configurations." },
-    { icon: "💰", title: "Cost Efficient", desc: "On average, our clients reduce cloud spend by 35% within 3 months through smart optimisation." },
-  ];
-
-  const techStack = [
-    { label: "AWS", color: "#ff9900" },
-    { label: "Azure", color: "#0089d6" },
-    { label: "Google Cloud", color: "#4285f4" },
-    { label: "Kubernetes", color: "#326ce5" },
-    { label: "Docker", color: "#2496ed" },
-    { label: "Terraform", color: "#7b42bc" },
-    { label: "Ansible", color: "#ee0000" },
-    { label: "Prometheus", color: "#e6522c" },
-  ];
-
-  const steps = [
-    { n: "01", title: "Cloud Assessment", desc: "Audit your current infrastructure, identify migration candidates, and define your cloud strategy." },
-    { n: "02", title: "Architecture Design", desc: "Blueprint your target cloud architecture — HA, DR, networking, and security posture." },
-    { n: "03", title: "Migration & Setup", desc: "Phased migration with automated tooling, testing at every stage, and rollback safeguards." },
-    { n: "04", title: "Optimise & Monitor", desc: "Continuous cost analysis, performance tuning, and 24/7 monitoring post-migration." },
-  ];
-
-  const cloudMetrics = [
-    { value: "99.99%", label: "Uptime SLA", icon: "⚡" },
-    { value: "35%", label: "Cost Savings", icon: "💰" },
-    { value: "3x", label: "Faster Deploy", icon: "🚀" },
-    { value: "24/7", label: "Monitoring", icon: "🛡️" },
-  ];
-
   return (
     <div className="min-h-screen bg-[#f4f8fd]">
       <style>{`
@@ -126,19 +134,9 @@ export default function CloudSolutions() {
           0%,100% { transform: translate(0,0); }
           50%      { transform: translate(6px,-8px); }
         }
-        @keyframes shimmer {
-          0%   { background-position: -200% center; }
-          100% { background-position:  200% center; }
-        }
         @keyframes pulseCloud {
           0%,100% { opacity: 0.6; transform: scale(1); }
           50%      { opacity: 1;   transform: scale(1.05); }
-        }
-        @keyframes dataFlow {
-          0%   { stroke-dashoffset: 100; opacity: 0; }
-          20%  { opacity: 1; }
-          80%  { opacity: 1; }
-          100% { stroke-dashoffset: 0; opacity: 0; }
         }
         @keyframes nodeGlow {
           0%,100% { box-shadow: 0 0 0 0 rgba(26,111,196,0.4); }
@@ -150,7 +148,7 @@ export default function CloudSolutions() {
         .fade-up    { animation: fadeUp    0.7s ease both; }
         .d1{animation-delay:0.05s} .d2{animation-delay:0.12s}
         .d3{animation-delay:0.20s} .d4{animation-delay:0.28s}
-        .d5{animation-delay:0.36s}
+        .d5{animation-delay:0.36s} .d6{animation-delay:0.44s}
 
         .geo-ring {
           position: absolute; border-radius: 50%;
@@ -161,7 +159,7 @@ export default function CloudSolutions() {
           border: 1.5px dashed rgba(26,111,196,0.2);
           animation: rotateSlow 18s linear infinite;
         }
-        .float-cloud { animation: floatCloud 7s ease-in-out infinite; }
+        .float-cloud   { animation: floatCloud 7s ease-in-out infinite; }
         .float-cloud-2 { animation: floatCloud 9s ease-in-out infinite reverse; }
 
         .float-badge {
@@ -189,30 +187,11 @@ export default function CloudSolutions() {
         /* Cloud viz panel */
         .cloud-panel {
           background: #0d1f3c;
-          border-radius: 24px;
-          padding: 24px;
-          position: relative;
-          overflow: hidden;
+          border-radius: 24px; padding: 24px;
+          position: relative; overflow: hidden;
           box-shadow: 0 30px 80px rgba(0,0,0,0.35);
           border: 1px solid rgba(255,255,255,0.07);
         }
-        .cloud-node {
-          border-radius: 14px;
-          display: flex; flex-direction: column;
-          align-items: center; justify-content: center;
-          gap: 6px; padding: 12px 8px;
-          transition: all 0.3s ease;
-          animation: nodeGlow 3s ease-in-out infinite;
-          cursor: default;
-        }
-        .cloud-node:hover { transform: translateY(-4px); }
-        .cloud-node-icon {
-          width: 40px; height: 40px; border-radius: 10px;
-          display: flex; align-items: center; justify-content: center;
-          font-size: 18px;
-        }
-
-        /* Metric cards */
         .metric-card {
           background: rgba(255,255,255,0.06);
           border-radius: 14px; padding: 16px;
@@ -224,80 +203,75 @@ export default function CloudSolutions() {
           transform: translateY(-3px);
         }
 
-        /* Cap cards */
-        .cap-card {
-          background: white; border-radius: 18px;
-          padding: 24px 22px; border: 1.5px solid #e8f0fb;
-          display: flex; align-items: flex-start; gap: 16px;
-          transition: all 0.3s ease;
+        /* Offering cards */
+        .offering-card {
+          background: white; border-radius: 22px;
+          padding: 30px 26px; border: 1.5px solid #e8f0fb;
+          transition: all 0.32s cubic-bezier(0.4,0,0.2,1);
+          position: relative; overflow: hidden; height: 100%;
         }
-        .cap-card:hover {
+        .offering-card::after {
+          content: ''; position: absolute;
+          bottom: 0; left: 0; right: 0; height: 3px;
+          background: linear-gradient(90deg, #1a6fc4, #17b8e0);
+          transform: scaleX(0); transform-origin: left;
+          transition: transform 0.35s ease;
+        }
+        .offering-card:hover::after { transform: scaleX(1); }
+        .offering-card:hover {
+          transform: translateY(-7px);
+          box-shadow: 0 22px 60px rgba(26,111,196,0.14);
+          border-color: rgba(26,111,196,0.2);
+        }
+        .offering-icon {
+          width: 56px; height: 56px; border-radius: 16px;
+          background: linear-gradient(135deg, #eef4fd, #daeeff);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 26px; margin-bottom: 16px;
+          transition: transform 0.3s ease;
+        }
+        .offering-card:hover .offering-icon { transform: scale(1.1) rotate(-5deg); }
+        .bullet-item {
+          display: flex; align-items: flex-start; gap: 8px;
+          font-size: 13px; color: #475569; line-height: 1.5;
+          padding: 3px 0;
+        }
+        .bullet-dot {
+          width: 6px; height: 6px; border-radius: 50%;
+          background: linear-gradient(135deg, #1a6fc4, #17b8e0);
+          flex-shrink: 0; margin-top: 6px;
+        }
+
+        /* Platform cards */
+        .platform-card {
+          background: white; border-radius: 18px;
+          padding: 22px 20px; border: 1.5px solid #e8f0fb;
+          display: flex; align-items: center; gap: 14px;
+          transition: all 0.28s ease;
+        }
+        .platform-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 16px 45px rgba(26,111,196,0.13);
-          border-color: rgba(26,111,196,0.25);
+          border-color: rgba(26,111,196,0.2);
         }
-        .cap-icon {
-          width: 46px; height: 46px; border-radius: 12px;
-          display: flex; align-items: center; justify-content: center;
-          background: linear-gradient(135deg, #1a6fc4, #17b8e0);
-          color: white; flex-shrink: 0; transition: transform 0.3s ease;
-        }
-        .cap-card:hover .cap-icon { transform: scale(1.1) rotate(-5deg); }
 
         /* Why cards */
         .why-card {
           background: white; border-radius: 18px;
           padding: 28px 24px; border: 1.5px solid #e8f0fb;
-          transition: all 0.3s ease; text-align: center;
+          transition: all 0.3s ease;
         }
         .why-card:hover {
           transform: translateY(-6px);
           box-shadow: 0 16px 45px rgba(26,111,196,0.12);
         }
         .why-icon {
-          width: 56px; height: 56px; border-radius: 16px; margin: 0 auto 16px;
+          width: 52px; height: 52px; border-radius: 14px; margin-bottom: 14px;
           background: linear-gradient(135deg, #eef4fd, #daeeff);
           display: flex; align-items: center; justify-content: center;
-          font-size: 24px; transition: transform 0.3s ease;
+          font-size: 22px; transition: transform 0.3s ease;
         }
         .why-card:hover .why-icon { transform: scale(1.1) rotate(-5deg); }
-
-        /* Step cards */
-        .step-card {
-          background: white; border-radius: 20px;
-          padding: 28px 22px; border: 1.5px solid #e8f0fb;
-          transition: all 0.3s ease; position: relative; overflow: hidden;
-        }
-        .step-card::before {
-          content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-          background: linear-gradient(90deg, #1a6fc4, #17b8e0);
-          transform: scaleX(0); transform-origin: left; transition: transform 0.35s ease;
-        }
-        .step-card:hover::before { transform: scaleX(1); }
-        .step-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 18px 50px rgba(26,111,196,0.13);
-        }
-        .step-num {
-          font-family: 'Sora', sans-serif; font-size: 40px; font-weight: 800;
-          line-height: 1; margin-bottom: 12px;
-          background: linear-gradient(135deg, rgba(26,111,196,0.12), rgba(23,184,224,0.12));
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-
-        /* Tech pill */
-        .tech-pill {
-          display: inline-flex; align-items: center; gap: 8px;
-          padding: 8px 16px; border-radius: 50px;
-          background: white; border: 1.5px solid #e8f0fb;
-          font-size: 13px; font-weight: 600; color: #1e3a5f;
-          transition: all 0.25s ease;
-        }
-        .tech-pill:hover {
-          border-color: rgba(26,111,196,0.3);
-          box-shadow: 0 6px 20px rgba(26,111,196,0.1);
-          transform: translateY(-2px);
-        }
 
         /* CTA btn */
         .cta-btn {
@@ -307,15 +281,6 @@ export default function CloudSolutions() {
           cursor: pointer; transition: all 0.3s ease; border: none;
           text-decoration: none;
         }
-
-        /* SVG data flow line */
-        .data-line {
-          stroke-dasharray: 100;
-          stroke-dashoffset: 100;
-          animation: dataFlow 3s ease-in-out infinite;
-        }
-        .data-line-2 { animation-delay: 1s; }
-        .data-line-3 { animation-delay: 2s; }
       `}</style>
 
       {/* ══════════════════════════════
@@ -338,26 +303,22 @@ export default function CloudSolutions() {
 
             {/* Left */}
             <div className="fade-left">
-              <h1 className="sora text-4xl md:text-5xl text-white leading-tight mb-5" style={{ fontWeight: 800 }}>
-                Power Your Business<br />
-                <span style={{ color: "#a5f3fc" }}>with the Cloud</span>
-              </h1>
-
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-5"
                 style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)" }}>
-                <svg className="w-4 h-4 text-cyan-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                    d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
+                <span>☁️</span>
                 <span className="sora text-xs text-cyan-100 uppercase tracking-widest" style={{ fontWeight: 700 }}>
                   Cloud Solutions
                 </span>
               </div>
-
+              <h1 className="sora text-4xl md:text-5xl text-white leading-tight mb-5" style={{ fontWeight: 800 }}>
+                Accelerate Your Business<br />
+                <span style={{ color: "#a5f3fc" }}>with Scalable Cloud</span>
+              </h1>
               <p className="text-blue-100 text-base leading-relaxed max-w-lg mb-8" style={{ opacity: 0.9 }}>
-                Leverage the power of cloud computing to enhance scalability, security, and efficiency. Nexora helps you migrate, manage, and optimize your cloud infrastructure with confidence.
+                At Nexora Technology Services Pvt Ltd, we help businesses modernize their IT infrastructure
+                with secure, scalable, and cost-effective cloud solutions — improving agility, collaboration,
+                and performance across your entire organization.
               </p>
-
               <div className="flex gap-4 flex-wrap">
                 <Link href="/contact" className="cta-btn"
                   style={{ background: "white", color: "#1a6fc4", boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
@@ -366,7 +327,7 @@ export default function CloudSolutions() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
-                <Link href="/contact" className="cta-btn text-white hover:bg-white/15"
+                <Link href="/contact" className="cta-btn text-white"
                   style={{ background: "rgba(255,255,255,0.12)", border: "1.5px solid rgba(255,255,255,0.45)" }}>
                   Free Assessment
                 </Link>
@@ -376,7 +337,6 @@ export default function CloudSolutions() {
             {/* Right: Cloud Architecture Viz */}
             <div className="fade-right hidden lg:block">
               <div className="cloud-panel">
-                {/* Panel header */}
                 <div className="flex items-center justify-between mb-5">
                   <div className="flex items-center gap-2">
                     <div className="flex gap-1.5">
@@ -392,34 +352,21 @@ export default function CloudSolutions() {
                   </div>
                 </div>
 
-                {/* Cloud diagram */}
                 <div className="relative">
-                  {/* Top row: providers */}
                   <div className="grid grid-cols-3 gap-3 mb-4">
                     {[
                       { label: "AWS", icon: "🟠", bg: "#1a2a1a", color: "#ff9900" },
                       { label: "Azure", icon: "🔵", bg: "#1a1a2e", color: "#0089d6" },
                       { label: "GCP", icon: "🔴", bg: "#2a1a1a", color: "#4285f4" },
                     ].map((p, i) => (
-                 <div
-  key={i}
-  style={{
-    background: p.bg + "99",
-    animationDelay: `${i * 0.8}s`,
-    border: `1px solid ${p.color}33`,
-    borderRadius: "14px",
-    padding: "12px 8px",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "6px",
-    transition: "all 0.3s ease",
-    cursor: "default",
-    animation: `nodeGlow 3s ease-in-out ${i * 0.8}s infinite`,
-  }}
->
-                        <div className="cloud-node-icon" style={{ background: p.color + "22" }}>
-                          <span style={{ fontSize: "18px" }}>{p.icon}</span>
+                      <div key={i} style={{
+                        background: p.bg + "99", animationDelay: `${i * 0.8}s`,
+                        border: `1px solid ${p.color}33`, borderRadius: "14px", padding: "12px 8px",
+                        display: "flex", flexDirection: "column", alignItems: "center", gap: "6px",
+                        animation: `nodeGlow 3s ease-in-out ${i * 0.8}s infinite`,
+                      }}>
+                        <div style={{ width: 40, height: 40, borderRadius: 10, background: p.color + "22", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>
+                          {p.icon}
                         </div>
                         <span className="text-white text-xs font-semibold">{p.label}</span>
                         <div className="flex gap-1 mt-1">
@@ -432,17 +379,12 @@ export default function CloudSolutions() {
                     ))}
                   </div>
 
-                  {/* SVG connecting lines */}
                   <svg className="w-full" height="30" style={{ margin: "-4px 0" }}>
                     <line x1="17%" y1="0" x2="50%" y2="30" stroke="#1e80d8" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
                     <line x1="50%" y1="0" x2="50%" y2="30" stroke="#17b8e0" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
                     <line x1="83%" y1="0" x2="50%" y2="30" stroke="#1e80d8" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
-                    <circle cx="17%" cy="0" r="3" fill="#ff9900" opacity="0.7" />
-                    <circle cx="50%" cy="0" r="3" fill="#0089d6" opacity="0.7" />
-                    <circle cx="83%" cy="0" r="3" fill="#4285f4" opacity="0.7" />
                   </svg>
 
-                  {/* Middle: Nexora Cloud Hub */}
                   <div className="flex justify-center my-2">
                     <div className="px-5 py-3 rounded-2xl flex items-center gap-3"
                       style={{ background: "linear-gradient(135deg, rgba(26,111,196,0.3), rgba(23,184,224,0.2))", border: "1.5px solid rgba(23,184,224,0.4)" }}>
@@ -457,14 +399,12 @@ export default function CloudSolutions() {
                     </div>
                   </div>
 
-                  {/* SVG connecting to bottom */}
                   <svg className="w-full" height="30" style={{ margin: "-4px 0" }}>
                     <line x1="50%" y1="0" x2="20%" y2="30" stroke="#17b8e0" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
                     <line x1="50%" y1="0" x2="50%" y2="30" stroke="#1e80d8" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
                     <line x1="50%" y1="0" x2="80%" y2="30" stroke="#17b8e0" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.4" />
                   </svg>
 
-                  {/* Bottom row: services */}
                   <div className="grid grid-cols-3 gap-3 mt-1">
                     {[
                       { label: "Security", icon: "🔒", color: "#22c55e" },
@@ -472,7 +412,7 @@ export default function CloudSolutions() {
                       { label: "Monitor", icon: "📊", color: "#8b5cf6" },
                     ].map((s, i) => (
                       <div key={i} className="text-center py-3 px-2 rounded-xl"
-                        style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${s.color}33`, animationDelay: `${i * 0.5}s` }}>
+                        style={{ background: "rgba(255,255,255,0.05)", border: `1px solid ${s.color}33` }}>
                         <div className="text-xl mb-1">{s.icon}</div>
                         <p className="text-white text-xs font-semibold">{s.label}</p>
                       </div>
@@ -480,12 +420,11 @@ export default function CloudSolutions() {
                   </div>
                 </div>
 
-                {/* Metric row */}
                 <div className="grid grid-cols-4 gap-2 mt-5">
                   {cloudMetrics.map((m, i) => (
                     <div key={i} className="metric-card">
                       <div className="text-lg mb-1">{m.icon}</div>
-                      <p className="sora text-white text-xs" style={{ fontWeight: 800, fontSize: "13px" }}>{m.value}</p>
+                      <p className="sora text-white" style={{ fontWeight: 800, fontSize: "13px" }}>{m.value}</p>
                       <p className="text-slate-400" style={{ fontSize: "9px" }}>{m.label}</p>
                     </div>
                   ))}
@@ -498,18 +437,71 @@ export default function CloudSolutions() {
       </section>
 
       {/* ══════════════════════════════
-          IMAGE + CAPABILITIES
+          INTRO STRIP
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
+      <section className="py-14 px-4 bg-white">
+        <div className="max-w-4xl mx-auto text-center fade-up">
+          <p className="text-slate-600 text-base leading-relaxed">
+            Whether you are <strong className="text-[#1a6fc4]">migrating to the cloud</strong>, building
+            cloud-native applications, or managing multi-cloud environments, our team delivers reliable
+            solutions tailored to your business goals.
+          </p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════
+          SERVICE OFFERINGS
+      ══════════════════════════════ */}
+      <section className="py-20 px-4 bg-[#f4f8fd]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14 fade-up">
+            <div className="section-label" style={{ margin: "0 auto 14px" }}>What We Offer</div>
+            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
+              Our Cloud Service Offerings
+            </h2>
+            <p className="text-slate-500 mt-3 text-sm max-w-xl mx-auto leading-relaxed">
+              Comprehensive cloud services covering every stage of your digital transformation journey —
+              from strategy to security.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {offerings.map((o, i) => (
+              <div key={o.title} className={`offering-card fade-up d${(i % 5) + 1}`}>
+                <div className="offering-icon">{o.icon}</div>
+                <h3 className="sora text-base text-[#1e3a5f] mb-2 leading-snug" style={{ fontWeight: 700 }}>
+                  {o.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed mb-4">{o.desc}</p>
+                <p className="sora text-xs text-[#1a6fc4] uppercase tracking-widest font-bold mb-3">
+                  {o.subtitle}
+                </p>
+                <ul className="space-y-1">
+                  {o.items.map((item) => (
+                    <li key={item} className="bullet-item">
+                      <span className="bullet-dot" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════
+          IMAGE + PLATFORMS
+      ══════════════════════════════ */}
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left: Image */}
-          <div className="fade-left relative flex justify-center order-2 lg:order-1">
+          <div className="fade-left relative flex justify-center">
             <div className="relative w-full max-w-md">
               <div className="deco-ring" style={{ width: 360, height: 360, top: -30, left: -30, zIndex: 0 }} />
               <div className="deco-ring" style={{ width: 200, height: 200, bottom: -20, right: -20, zIndex: 0, animationDirection: "reverse" }} />
 
-              {/* Main image */}
               <div style={{ borderRadius: "24px", overflow: "hidden", position: "relative", zIndex: 2, boxShadow: "0 24px 70px rgba(26,111,196,0.22)" }}>
                 <Image
                   src={img3}
@@ -517,79 +509,65 @@ export default function CloudSolutions() {
                   width={480}
                   height={500}
                   className="w-full object-cover"
-                  style={{ height: "450px" }}
+                  style={{ height: "420px" }}
                 />
-                <div className="absolute inset-0" style={{
-                  background: "linear-gradient(180deg, transparent 55%, rgba(26,111,196,0.25) 100%)"
-                }} />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 55%, rgba(26,111,196,0.25) 100%)" }} />
               </div>
 
-              {/* Badge top-right */}
               <div className="float-badge" style={{ top: 16, right: -20 }}>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={{ background: "linear-gradient(135deg, #1a6fc4, #17b8e0)" }}>
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                    </svg>
-                  </div>
+                    style={{ background: "linear-gradient(135deg, #1a6fc4, #17b8e0)" }}>☁️</div>
                   <div>
-                    <p className="sora text-xs text-[#1e3a5f]" style={{ fontWeight: 700, lineHeight: 1.2 }}>99.99% Uptime</p>
+                    <p className="sora text-xs text-[#1e3a5f]" style={{ fontWeight: 700 }}>99.99% Uptime</p>
                     <p className="text-slate-400" style={{ fontSize: "10px" }}>SLA Guaranteed</p>
                   </div>
                 </div>
               </div>
 
-              {/* Badge bottom-left */}
               <div className="float-badge" style={{ bottom: 40, left: -20, animationDelay: "2s" }}>
                 <div className="flex items-center gap-2">
                   <span style={{ fontSize: "20px" }}>💰</span>
                   <div>
-                    <p className="sora text-xs text-[#1e3a5f]" style={{ fontWeight: 700, lineHeight: 1.2 }}>35% Cost Saved</p>
+                    <p className="sora text-xs text-[#1e3a5f]" style={{ fontWeight: 700 }}>35% Cost Saved</p>
                     <p className="text-slate-400" style={{ fontSize: "10px" }}>Avg. client savings</p>
                   </div>
                 </div>
               </div>
-
-              {/* Stat row */}
-              <div className="flex gap-3 mt-5 justify-center">
-                {[{ n: "300+", l: "Migrations" }, { n: "3x", l: "Faster" }, { n: "24/7", l: "Support" }].map((s, i) => (
-                  <div key={i} className="flex-1 text-center py-3 px-2 rounded-xl"
-                    style={{ background: "white", boxShadow: "0 6px 24px rgba(26,111,196,0.1)", border: "1px solid rgba(26,111,196,0.1)" }}>
-                    <p className="sora text-sm text-[#1a6fc4]" style={{ fontWeight: 800 }}>{s.n}</p>
-                    <p className="text-slate-400 text-xs uppercase tracking-wide">{s.l}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
-          {/* Right: Capabilities */}
-          <div className="fade-right order-1 lg:order-2">
-            <div className="section-label">Our Capabilities</div>
-            <h2 className="sora text-4xl text-[#1e3a5f] leading-tight mb-4" style={{ fontWeight: 800 }}>
-              Full-Spectrum<br />
-              <span style={{
-                background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>
-                Cloud Expertise
+          {/* Right: Platforms */}
+          <div className="fade-right">
+            <div className="section-label">Cloud Platforms</div>
+            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] leading-tight mb-4" style={{ fontWeight: 800 }}>
+              Cloud Platforms<br />
+              <span style={{ background: "linear-gradient(135deg, #1a6fc4, #17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                We Work With
               </span>
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-8 text-sm">
-              From first migration to ongoing optimisation — Nexora covers every layer of your cloud journey with deep multi-cloud expertise and a security-first mindset.
+            <p className="text-slate-500 text-sm leading-relaxed mb-8">
+              We support leading cloud platforms and technologies, delivering certified expertise across
+              all major providers so you always have the right tool for the job.
             </p>
 
-            <div className="space-y-3">
-              {capabilities.map((c, i) => (
-                <div key={i} className={`cap-card fade-up d${i + 1}`}>
-                  <div className="cap-icon">{c.icon}</div>
-                  <div>
-                    <h4 className="sora text-sm text-[#1e3a5f] mb-1" style={{ fontWeight: 700 }}>{c.title}</h4>
-                    <p className="text-slate-500 text-xs leading-relaxed">{c.desc}</p>
+            <div className="space-y-4">
+              {platforms.map((p, i) => (
+                <div key={p.label} className={`platform-card fade-up d${i + 1}`}>
+                  <div className="w-12 h-12 rounded-14 flex items-center justify-center text-2xl flex-shrink-0"
+                    style={{ background: p.color + "18", borderRadius: 14 }}>
+                    {p.icon}
                   </div>
+                  <div>
+                    <p className="sora text-sm text-[#1e3a5f] font-bold">{p.label}</p>
+                    <div className="flex items-center gap-1 mt-1">
+                      <div className="h-1 rounded-full" style={{ width: 40, background: p.color, opacity: 0.7 }} />
+                      <div className="h-1 rounded-full" style={{ width: 24, background: p.color, opacity: 0.4 }} />
+                      <div className="h-1 rounded-full" style={{ width: 14, background: p.color, opacity: 0.2 }} />
+                    </div>
+                  </div>
+                  <div className="ml-auto w-2.5 h-2.5 rounded-full flex-shrink-0"
+                    style={{ background: p.color, boxShadow: `0 0 6px ${p.color}` }} />
                 </div>
               ))}
             </div>
@@ -600,89 +578,28 @@ export default function CloudSolutions() {
       {/* ══════════════════════════════
           WHY NEXORA
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
-        <div className="max-w-5xl mx-auto">
+      <section className="py-20 px-4 bg-[#f4f8fd]">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14 fade-up">
-            <div className="section-label mx-auto w-fit">Why Nexora</div>
-            <h2 className="sora text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
-              Cloud Adoption{" "}
-              <span style={{
-                background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>Done Right</span>
+            <div className="section-label" style={{ margin: "0 auto 14px" }}>Why Choose Us</div>
+            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
+              Why Choose Nexora Technology Services{" "}
+              <span style={{ background: "linear-gradient(135deg, #1a6fc4, #17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+                for Cloud?
+              </span>
             </h2>
             <p className="text-slate-500 mt-3 text-sm max-w-lg mx-auto leading-relaxed">
-              We ensure seamless cloud adoption with minimal disruption while maximizing performance and cost efficiency.
+              We ensure seamless cloud adoption with minimal disruption while maximising performance,
+              security, and cost efficiency.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {whyItems.map((w, i) => (
-              <div key={i} className={`why-card fade-up d${i + 1}`}>
-                <div className="why-icon"><span>{w.icon}</span></div>
+              <div key={w.title} className={`why-card fade-up d${(i % 6) + 1}`}>
+                <div className="why-icon">{w.icon}</div>
                 <h3 className="sora text-sm text-[#1e3a5f] mb-2" style={{ fontWeight: 700 }}>{w.title}</h3>
                 <p className="text-slate-500 text-xs leading-relaxed">{w.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          PROCESS
-      ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 fade-up">
-            <div className="section-label mx-auto w-fit">Our Process</div>
-            <h2 className="sora text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
-              Your Cloud{" "}
-              <span style={{
-                background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>Journey</span>
-            </h2>
-            <p className="text-slate-500 mt-3 text-sm max-w-lg mx-auto">
-              A structured four-phase process that ensures confident, disruption-free cloud adoption.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {steps.map((s, i) => (
-              <div key={i} className={`step-card fade-up d${i + 1}`}>
-                <div className="step-num">{s.n}</div>
-                <h4 className="sora text-sm text-[#1e3a5f] mb-2" style={{ fontWeight: 700 }}>{s.title}</h4>
-                <p className="text-slate-500 text-xs leading-relaxed">{s.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════
-          TECH STACK
-      ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="fade-up">
-            <div className="section-label mx-auto w-fit">Cloud Platforms</div>
-            <h2 className="sora text-4xl text-[#1e3a5f] mb-4" style={{ fontWeight: 800 }}>
-              Platforms &amp;{" "}
-              <span style={{
-                background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}>Tools We Master</span>
-            </h2>
-            <p className="text-slate-500 text-sm max-w-md mx-auto mb-10">
-              Multi-cloud certified engineers working across all major platforms and DevOps toolchains.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {techStack.map((t, i) => (
-              <div key={i} className={`tech-pill fade-up`} style={{ animationDelay: `${i * 0.07}s` }}>
-                <div className="w-2 h-2 rounded-full" style={{ background: t.color }} />
-                {t.label}
               </div>
             ))}
           </div>
@@ -694,37 +611,39 @@ export default function CloudSolutions() {
       ══════════════════════════════ */}
       <section
         className="w-full py-20 px-4 relative overflow-hidden"
-        style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 50%, #17b8e0 100%)" }}
+        style={{ background: "linear-gradient(135deg, #0a1e3d 0%, #1a6fc4 60%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 420, height: 420, top: -160, right: -80, opacity: 0.12 }} />
         <div className="geo-ring" style={{ width: 260, height: 260, bottom: -90, left: -60, opacity: 0.09 }} />
+        <div className="float-cloud absolute top-8 left-1/4 w-24 h-24 rounded-full opacity-15"
+          style={{ background: "radial-gradient(circle, #7dd3fc, transparent)" }} />
 
         <div className="max-w-3xl mx-auto text-center relative z-10 fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-5"
             style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)" }}>
-            <span style={{ fontSize: "16px" }}>☁️</span>
+            <span>☁️</span>
             <span className="sora text-xs text-white uppercase tracking-widest" style={{ fontWeight: 700 }}>
-              Move with Confidence
+              Transform Your Business
             </span>
           </div>
           <h2 className="sora text-3xl md:text-4xl text-white mb-4 leading-tight" style={{ fontWeight: 800 }}>
-            Ready to Move to<br />
-            <span style={{ color: "#a5f3fc" }}>the Cloud?</span>
+            Transform Your Business<br />
+            <span style={{ color: "#a5f3fc" }}>with Cloud Technology</span>
           </h2>
-          <p className="text-blue-100 mb-10 max-w-lg mx-auto text-sm leading-relaxed" style={{ opacity: 0.9 }}>
-            Move to the cloud with confidence. Our certified cloud engineers will assess your infrastructure and design a migration plan tailored to your business — free of charge.
+          <p className="text-blue-100 mb-10 max-w-xl mx-auto text-sm leading-relaxed" style={{ opacity: 0.9 }}>
+            Empower your organization with flexible, reliable, and future-ready cloud solutions. We help
+            businesses leverage the power of the cloud to improve operational efficiency, enhance customer
+            experiences, and drive innovation.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/contact"
-              className="cta-btn text-[#1a6fc4] bg-white hover:shadow-2xl hover:scale-105 transition-all"
+            <Link href="/contact" className="cta-btn text-[#1a6fc4] bg-white"
               style={{ boxShadow: "0 8px 28px rgba(0,0,0,0.14)" }}>
               Get Free Assessment
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Link>
-            <Link href="/contact"
-              className="cta-btn text-white hover:bg-white/20 transition-all"
+            <Link href="/contact" className="cta-btn text-white"
               style={{ background: "rgba(255,255,255,0.12)", border: "1.5px solid rgba(255,255,255,0.4)" }}>
               Talk to an Expert
             </Link>

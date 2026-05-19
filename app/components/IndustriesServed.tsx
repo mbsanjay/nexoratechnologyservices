@@ -6,35 +6,57 @@ import img1 from "@/app/Photo/img 1.jpg";
 import img2 from "@/app/Photo/img 2.jpg";
 import img3 from "@/app/Photo/img 3.jpg";
 
-const keyPractices = [
+const industries = [
   {
-    icon: "✅",
-    title: "Comprehensive Testing",
-    desc: "We conduct multiple levels of testing, including functional, performance, security, and usability testing, to ensure that every aspect of the product meets expectations.",
+    icon: "🏦",
+    title: "Banking & Financial Services",
+    badge: "BFSI",
+    desc: "Delivering secure, compliant, and scalable technology solutions for banks, insurance providers, and financial institutions.",
   },
   {
-    icon: "🤖",
-    title: "Automation & Tools",
-    desc: "By leveraging modern automation tools, we enhance efficiency, accuracy, and speed in our testing processes.",
+    icon: "🏭",
+    title: "Manufacturing",
+    badge: null,
+    desc: "Streamlining production, inventory, supply chain, and operations through integrated ERP and automation solutions.",
   },
   {
-    icon: "🔄",
-    title: "Continuous Improvement",
-    desc: "We regularly review and refine our QA methodologies to adapt to evolving technologies and industry best practices.",
+    icon: "🛒",
+    title: "Retail & E-Commerce",
+    badge: null,
+    desc: "Empowering retailers and online businesses with unified commerce platforms, analytics, and customer experience solutions.",
   },
   {
-    icon: "📋",
-    title: "Compliance & Standards",
-    desc: "Our processes align with recognized industry standards, ensuring that our deliverables meet regulatory and quality benchmarks.",
+    icon: "💻",
+    title: "Hi Tech and Media",
+    badge: null,
+    desc: "Supporting technology companies and media organizations with agile development, data insights, and digital transformation.",
+  },
+  {
+    icon: "⚡",
+    title: "Energy & Utilities",
+    badge: null,
+    desc: "Driving efficiency and compliance in energy production, distribution, and utility management through smart technology.",
+  },
+  {
+    icon: "🚚",
+    title: "Logistics & Supply Chain",
+    badge: null,
+    desc: "Optimizing end-to-end logistics operations, fleet management, and supply chain visibility with real-time data solutions.",
+  },
+  {
+    icon: "✈️",
+    title: "Airways IT Services",
+    badge: null,
+    desc: "Providing specialized IT services for the aviation sector including operations management, passenger systems, and compliance tools.",
   },
 ];
 
-export default function QualityAssurance() {
+export default function IndustriesServed() {
   return (
     <div className="min-h-screen bg-[#f4f8fd] flex flex-col">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
-        *, body { font-family: 'DM Sans', sans-serif; }
+        * { font-family: 'DM Sans', sans-serif; }
         .sora { font-family: 'Sora', sans-serif; }
 
         @keyframes fadeLeft {
@@ -61,6 +83,10 @@ export default function QualityAssurance() {
           0%,100% { transform: translate(0,0); }
           50%      { transform: translate(5px,-8px); }
         }
+        @keyframes pulseGlow {
+          0%,100% { box-shadow: 0 0 0 0 rgba(26,111,196,0.3); }
+          50%      { box-shadow: 0 0 0 10px rgba(26,111,196,0); }
+        }
 
         .fade-left  { animation: fadeLeft  0.75s ease both; }
         .fade-right { animation: fadeRight 0.75s ease both; }
@@ -68,6 +94,8 @@ export default function QualityAssurance() {
 
         .d1{animation-delay:0.05s} .d2{animation-delay:0.13s}
         .d3{animation-delay:0.21s} .d4{animation-delay:0.29s}
+        .d5{animation-delay:0.37s} .d6{animation-delay:0.45s}
+        .d7{animation-delay:0.53s}
 
         .geo-ring {
           position: absolute; border-radius: 50%;
@@ -100,52 +128,66 @@ export default function QualityAssurance() {
         .dot-row span:nth-child(2) { opacity: 0.5; }
         .dot-row span:nth-child(3) { opacity: 0.25; }
 
-        /* Practice card */
-        .practice-card {
-          background: white; border-radius: 22px;
-          padding: 28px 24px; border: 1.5px solid #e8f0fb;
+        /* Industry card */
+        .industry-card {
+          background: white;
+          border-radius: 22px;
+          padding: 30px 26px;
+          border: 1.5px solid #e8f0fb;
           transition: all 0.32s cubic-bezier(0.4,0,0.2,1);
-          position: relative; overflow: hidden; height: 100%;
+          position: relative;
+          overflow: hidden;
+          height: 100%;
+          cursor: default;
         }
-        .practice-card::after {
-          content: ''; position: absolute;
-          bottom: 0; left: 0; right: 0; height: 3px;
+        .industry-card::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(26,111,196,0.04), rgba(23,184,224,0.04));
+          opacity: 0;
+          transition: opacity 0.35s ease;
+        }
+        .industry-card::after {
+          content: '';
+          position: absolute;
+          bottom: 0; left: 0; right: 0;
+          height: 3px;
           background: linear-gradient(90deg, #1a6fc4, #17b8e0);
-          transform: scaleX(0); transform-origin: left;
+          transform: scaleX(0);
+          transform-origin: left;
           transition: transform 0.35s ease;
         }
-        .practice-card:hover::after { transform: scaleX(1); }
-        .practice-card:hover {
-          transform: translateY(-7px);
-          box-shadow: 0 22px 60px rgba(26,111,196,0.14);
-          border-color: rgba(26,111,196,0.2);
+        .industry-card:hover::before { opacity: 1; }
+        .industry-card:hover::after  { transform: scaleX(1); }
+        .industry-card:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 24px 65px rgba(26,111,196,0.15);
+          border-color: rgba(26,111,196,0.22);
         }
-        .practice-icon {
-          width: 56px; height: 56px; border-radius: 16px;
+
+        .industry-icon {
+          width: 64px; height: 64px; border-radius: 18px;
           background: linear-gradient(135deg, #eef4fd, #daeeff);
           display: flex; align-items: center; justify-content: center;
-          font-size: 26px; margin-bottom: 16px;
+          font-size: 30px; margin-bottom: 18px;
           transition: transform 0.3s ease;
+          position: relative; z-index: 1;
         }
-        .practice-card:hover .practice-icon { transform: scale(1.1) rotate(-5deg); }
-
-        /* Commitment block */
-        .commit-block {
-          background: white; border-radius: 20px;
-          padding: 26px 24px; border: 1.5px solid #e8f0fb;
-          transition: all 0.3s ease;
-          display: flex; align-items: flex-start; gap: 16px;
-        }
-        .commit-block:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 16px 45px rgba(26,111,196,0.12);
-          border-color: rgba(26,111,196,0.2);
-        }
-        .commit-num {
-          font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 800;
+        .industry-card:hover .industry-icon {
+          transform: scale(1.12) rotate(-5deg);
           background: linear-gradient(135deg, #1a6fc4, #17b8e0);
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-          flex-shrink: 0; line-height: 1.1;
+        }
+
+        .industry-badge {
+          display: inline-block;
+          padding: 2px 10px; border-radius: 50px;
+          background: linear-gradient(135deg, rgba(26,111,196,0.1), rgba(23,184,224,0.1));
+          border: 1px solid rgba(26,111,196,0.18);
+          font-size: 10px; font-weight: 700; color: #1a6fc4;
+          letter-spacing: 0.08em; text-transform: uppercase;
+          font-family: 'Sora', sans-serif;
+          margin-bottom: 6px;
         }
 
         /* Image stack */
@@ -199,46 +241,61 @@ export default function QualityAssurance() {
                 Nexora Technology Services Pvt Ltd
               </p>
               <h1 className="fade-left sora text-4xl md:text-5xl text-white mb-5 leading-tight d2" style={{ fontWeight: 800 }}>
-                Quality<br />
-                <span style={{ color: "#a5f3fc" }}>Assurance</span>
+                Industries<br />
+                <span style={{ color: "#a5f3fc" }}>We Serve</span>
               </h1>
               <p className="fade-left text-blue-100 text-base leading-relaxed max-w-lg mb-8 d3" style={{ opacity: 0.9 }}>
-                Quality Assurance is more than just a process — it is a commitment to delivering
-                excellence at every stage. We believe quality is built into a product from the very
-                beginning, not just tested at the end.
+                Nexora brings deep domain expertise across seven key industries — delivering
+                technology solutions that are tailored to the unique challenges, regulations,
+                and growth opportunities of each sector.
               </p>
               <div className="fade-up d4 flex flex-wrap gap-4">
                 <Link href="/contact" className="cta-btn"
                   style={{ background: "white", color: "#1a6fc4", boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
-                  Get in Touch
+                  Work With Us
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
                 </Link>
                 <Link href="/contact" className="cta-btn text-white"
                   style={{ background: "rgba(255,255,255,0.12)", border: "1.5px solid rgba(255,255,255,0.4)" }}>
-                  Free Consultation
+                  Learn More
                 </Link>
               </div>
             </div>
 
-            {/* Right: stat blocks */}
-            <div className="fade-right hidden lg:flex flex-col gap-4 d2">
-              {[
-                { icon: "🛡️", label: "Reliability", value: "Built-In", sub: "From day one, not afterthought" },
-                { icon: "🎯", label: "Customer Satisfaction", value: "First Priority", sub: "Feedback-driven quality" },
-                { icon: "📐", label: "Industry Standards", value: "Compliant", sub: "Regulatory benchmarks met" },
-              ].map((s, i) => (
-                <div key={i} className="flex items-center gap-4 rounded-2xl px-6 py-4"
-                  style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", backdropFilter: "blur(10px)" }}>
-                  <span className="text-3xl">{s.icon}</span>
-                  <div className="flex-1">
-                    <p className="text-blue-200 text-xs uppercase tracking-widest" style={{ opacity: 0.75 }}>{s.label}</p>
-                    <p className="sora text-white text-base" style={{ fontWeight: 800 }}>{s.value}</p>
+            {/* Right: count + industry icons strip */}
+            <div className="fade-right hidden lg:block d2">
+              <div className="grid grid-cols-4 gap-3 mb-4">
+                {industries.slice(0, 4).map((ind, i) => (
+                  <div key={i}
+                    className="flex flex-col items-center justify-center gap-2 rounded-2xl py-4 px-2"
+                    style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)" }}>
+                    <span className="text-3xl">{ind.icon}</span>
+                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "10px", fontWeight: 700 }}>
+                      {ind.title.split(" ").slice(0, 2).join(" ")}
+                    </p>
                   </div>
-                  <p className="text-cyan-200 text-xs text-right max-w-[100px]" style={{ opacity: 0.7 }}>{s.sub}</p>
+                ))}
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                {industries.slice(4).map((ind, i) => (
+                  <div key={i}
+                    className="flex flex-col items-center justify-center gap-2 rounded-2xl py-4 px-2"
+                    style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)" }}>
+                    <span className="text-3xl">{ind.icon}</span>
+                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "10px", fontWeight: 700 }}>
+                      {ind.title.split(" ").slice(0, 2).join(" ")}
+                    </p>
+                  </div>
+                ))}
+                {/* stat tile */}
+                <div className="flex flex-col items-center justify-center gap-1 rounded-2xl py-4 px-2"
+                  style={{ background: "linear-gradient(135deg,rgba(26,111,196,0.5),rgba(23,184,224,0.3))", border: "1.5px solid rgba(255,255,255,0.3)" }}>
+                  <p className="sora text-white text-2xl" style={{ fontWeight: 800 }}>7+</p>
+                  <p className="text-cyan-200 text-center leading-tight" style={{ fontSize: "10px" }}>Industries</p>
                 </div>
-              ))}
+              </div>
             </div>
 
           </div>
@@ -253,28 +310,23 @@ export default function QualityAssurance() {
 
           {/* Left: text */}
           <div className="flex-1 fade-left">
-            <div className="section-label">Our Approach</div>
+            <div className="section-label">Domain Expertise</div>
             <div className="dot-row"><span /><span /><span /></div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] mb-5 leading-snug" style={{ fontWeight: 800 }}>
-              Structured, Proactive<br />
+              Technology Built for<br />
               <span style={{ background: "linear-gradient(90deg,#1a6fc4,#17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Quality Assurance
+                Your Industry
               </span>
             </h2>
-            <p className="text-slate-600 text-base leading-relaxed mb-5">
-              We follow a structured and proactive approach to quality assurance, integrating it
-              throughout the entire development lifecycle. From initial planning and design to
-              development, testing, and deployment, our QA team works closely with all stakeholders
-              to identify potential issues early and ensure consistent standards.
-            </p>
-            <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Our QA practices are designed to ensure reliability, performance, and customer satisfaction
-              at every stage of our work.
+            <p className="text-slate-600 text-base leading-relaxed mb-6">
+              At Nexora, we understand that every industry has its own set of challenges, compliance
+              requirements, and operational dynamics. Our solutions are shaped by deep sector knowledge
+              — not generic frameworks — ensuring faster adoption, better fit, and stronger outcomes.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact" className="cta-btn"
                 style={{ background: "linear-gradient(135deg,#1a6fc4,#17b8e0)", color: "white", boxShadow: "0 6px 22px rgba(26,111,196,0.35)" }}>
-                Talk to Our QA Team <span>→</span>
+                Get in Touch <span>→</span>
               </Link>
               <Link href="/about" className="cta-btn"
                 style={{ color: "#1a6fc4", border: "2px solid rgba(26,111,196,0.25)", background: "transparent" }}>
@@ -289,127 +341,59 @@ export default function QualityAssurance() {
             <div className="deco-ring" style={{ width: 270, height: 270, top: "50%", left: "50%", transform: "translate(-50%,-50%)", animationDirection: "reverse", opacity: 0.55 }} />
 
             <div className="img-main" style={{ width: 360, height: 280, marginTop: 40 }}>
-              <Image src={img1} alt="Quality Assurance" fill style={{ objectFit: "cover" }} />
+              <Image src={img1} alt="Industries we serve" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 190, height: 140, bottom: 10, left: "3%" }}>
-              <Image src={img2} alt="QA testing" fill style={{ objectFit: "cover" }} />
+              <Image src={img2} alt="Industry expertise" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 160, height: 118, top: 0, right: "2%" }}>
-              <Image src={img3} alt="QA standards" fill style={{ objectFit: "cover" }} />
+              <Image src={img3} alt="Domain solutions" fill style={{ objectFit: "cover" }} />
             </div>
 
             <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
-              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Zero Defect Goal</p>
-              <p className="text-slate-500 text-[11px]">Every Delivery</p>
+              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">500+ Projects</p>
+              <p className="text-slate-500 text-[11px]">Across Industries</p>
             </div>
             <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
-              <p className="sora text-xs font-bold text-white mb-0.5">End-to-End QA</p>
-              <p className="text-cyan-100 text-[11px]">Full Lifecycle</p>
+              <p className="sora text-xs font-bold text-white mb-0.5">7 Sectors</p>
+              <p className="text-cyan-100 text-[11px]">Deep Expertise</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════
-          KEY PRACTICES
+          INDUSTRY CARDS GRID
       ═══════════════════════════════ */}
       <section className="py-20 px-4 bg-[#f4f8fd]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14 fade-up">
-            <div className="section-label" style={{ margin: "0 auto 14px" }}>Key Practices</div>
+            <div className="section-label" style={{ margin: "0 auto 14px" }}>Industries Served</div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
-              How We Ensure Quality
+              Sectors We Specialise In
             </h2>
             <p className="text-slate-500 mt-3 text-sm max-w-xl mx-auto leading-relaxed">
-              Our QA framework is built on four core practices that together ensure every product
-              we deliver meets the highest standards.
+              From banking to aviation, we bring proven expertise and industry-specific solutions
+              to help businesses in every sector thrive.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {keyPractices.map((p, i) => (
-              <div key={p.title} className={`practice-card fade-up d${i + 1}`}>
-                <div className="practice-icon">{p.icon}</div>
-                <h3 className="sora text-base text-[#1e3a5f] mb-3 leading-snug" style={{ fontWeight: 700 }}>
-                  {p.title}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industries.map((ind, i) => (
+              <div key={ind.title} className={`industry-card fade-up d${(i % 6) + 1}`}>
+                <div className="industry-icon">{ind.icon}</div>
+                {ind.badge && (
+                  <div className="industry-badge">{ind.badge}</div>
+                )}
+                <h3 className="sora text-base text-[#1e3a5f] mb-3 leading-snug" style={{ fontWeight: 700, position: "relative", zIndex: 1 }}>
+                  {ind.title}
                 </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{p.desc}</p>
+                <p className="text-slate-500 text-sm leading-relaxed" style={{ position: "relative", zIndex: 1 }}>
+                  {ind.desc}
+                </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════
-          CUSTOMER-CENTRIC + COMMITMENT + SECOND IMAGE
-      ═══════════════════════════════ */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
-
-          {/* Left: two content blocks */}
-          <div className="flex-1 fade-left">
-            <div className="section-label">Our Focus &amp; Commitment</div>
-            <div className="dot-row"><span /><span /><span /></div>
-            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] mb-8 leading-snug" style={{ fontWeight: 800 }}>
-              Quality Defined by<br />
-              <span style={{ background: "linear-gradient(90deg,#1a6fc4,#17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Customer Success
-              </span>
-            </h2>
-
-            <div className="flex flex-col gap-5">
-              {/* Customer-Centric block */}
-              <div className="commit-block">
-                <div className="commit-num">01</div>
-                <div>
-                  <p className="sora text-[#1e3a5f] font-bold text-sm mb-2">Customer-Centric Focus</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">
-                    Quality for us is defined by customer satisfaction. We actively gather feedback,
-                    analyse user behaviour, and implement improvements to deliver products that truly
-                    meet user needs.
-                  </p>
-                </div>
-              </div>
-
-              {/* Commitment block */}
-              <div className="commit-block">
-                <div className="commit-num">02</div>
-                <div>
-                  <p className="sora text-[#1e3a5f] font-bold text-sm mb-2">Our Commitment</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">
-                    We are dedicated to delivering solutions that are not only functional but also
-                    reliable, secure, and scalable. Through rigorous quality assurance practices,
-                    we strive to exceed expectations and build long-term trust with our clients.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: images */}
-          <div className="flex-1 fade-right relative flex justify-center" style={{ minHeight: 420 }}>
-            <div className="deco-ring" style={{ width: 340, height: 340, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
-
-            <div className="img-main" style={{ width: 340, height: 260, marginTop: 50 }}>
-              <Image src={img3} alt="Customer satisfaction" fill style={{ objectFit: "cover" }} />
-            </div>
-            <div className="img-accent" style={{ width: 175, height: 130, top: 0, right: "4%" }}>
-              <Image src={img2} alt="QA commitment" fill style={{ objectFit: "cover" }} />
-            </div>
-            <div className="img-accent" style={{ width: 155, height: 115, bottom: 20, left: "4%" }}>
-              <Image src={img1} alt="Reliable solutions" fill style={{ objectFit: "cover" }} />
-            </div>
-
-            <div className="float-badge" style={{ top: 14, left: "6%", animationDelay: "0.8s" }}>
-              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Long-Term Trust</p>
-              <p className="text-slate-500 text-[11px]">Built with Clients</p>
-            </div>
-            <div className="float-badge"
-              style={{ bottom: 30, right: "5%", animationDelay: "1.4s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
-              <p className="sora text-xs font-bold text-white mb-0.5">Exceed Expectations</p>
-              <p className="text-cyan-100 text-[11px]">Every Delivery</p>
-            </div>
           </div>
         </div>
       </section>
@@ -428,15 +412,15 @@ export default function QualityAssurance() {
 
         <div className="max-w-3xl mx-auto text-center relative z-10 fade-up">
           <p className="sora text-xs tracking-[0.22em] text-cyan-300 uppercase mb-3 font-semibold">
-            Quality You Can Trust
+            Your Industry. Our Expertise.
           </p>
           <h2 className="sora text-3xl md:text-5xl text-white mb-5 leading-tight" style={{ fontWeight: 800 }}>
-            Let&apos;s Build Something<br />
-            <span style={{ color: "#a5f3fc" }}>Reliable & Scalable</span>
+            Let&apos;s Solve Your<br />
+            <span style={{ color: "#a5f3fc" }}>Industry Challenges</span>
           </h2>
           <p className="text-blue-200 text-base leading-relaxed mb-10 max-w-xl mx-auto" style={{ opacity: 0.88 }}>
-            Partner with Nexora for rigorous quality assurance that ensures every solution we
-            deliver is functional, secure, scalable, and built to exceed your expectations.
+            Talk to our industry specialists and discover how Nexora can deliver technology
+            solutions tailored precisely to your sector&apos;s needs.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="cta-btn"

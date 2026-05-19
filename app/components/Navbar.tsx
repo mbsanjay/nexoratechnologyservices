@@ -43,37 +43,37 @@ export default function Navbar() {
     {
       label: "About",
       children: [
-        { name: "Our Organization", href: "/about/our-organization" },
-        { name: "Leaders", href: "/about/leaders" },
+        { name: "Our Organization", href: "/components/Organization" },
+        { name: "Leaders", href: "/about" },
       ],
     },
     { label: "Media & Investors", href: "/media-investors" },
     {
       label: "What We Serve",
       children: [
-        { name: "Industry", href: "/what-we-serve/industry" },
+        { name: "Industry", href: "/components/IndustriesServed" },
         {
           name: "Services",
           href: "/what-we-serve/services",
           sub: [
-            { name: "Data & AI", href: "/what-we-serve/services/data-ai" },
+            { name: "Data & AI", href: "/dataAi" },
             {
               name: "Application Services",
               href: "/what-we-serve/services/application-services",
               sub: [
-                { name: "ERP", href: "/what-we-serve/services/application-services/erp" },
-                { name: "Custom Developments", href: "/what-we-serve/services/application-services/custom-developments" },
+                { name: "ERP", href: "/components/ERPService" },
+                { name: "Custom Developments", href: "/components/CustomDevelopment" },
               ],
             },
-            { name: "Cloud Services", href: "/what-we-serve/services/cloud-services" },
-            { name: "Consulting", href: "/what-we-serve/services/consulting" },
+            { name: "Cloud Services", href: "/services/cloud-solution" },
+            { name: "Consulting", href: "/components/Consulting" },
             { name: "Cyber Security", href: "/what-we-serve/services/cyber-security" },
-            { name: "Quality Assurance", href: "/what-we-serve/services/quality-assurance" },
+            { name: "Quality Assurance", href: "/services/Quality-Assurance" },
           ],
         },
-        { name: "Product", href: "/what-we-serve/product" },
-        { name: "Learning & Development", href: "/what-we-serve/learning-development" },
-        { name: "Talent Acquisition", href: "/what-we-serve/talent-acquisition" },
+        { name: "Product", href: "/components/ProductDevelopment" },
+        { name: "Learning & Development", href: "/services/Learning-Development" },
+        { name: "Talent Acquisition", href: "/services/Talent-Acquisition" },
       ],
     },
     {
@@ -108,7 +108,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="sticky top-0 z-50 shadow-lg"
+      className="fixed top-0 left-0 right-0 z-50 shadow-lg"
       style={{
         background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 40%, #1a9fd4 80%, #17b8e0 100%)",
         borderBottom: "1px solid rgba(255,255,255,0.15)",

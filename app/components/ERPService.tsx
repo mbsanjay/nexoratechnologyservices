@@ -6,35 +6,55 @@ import img1 from "@/app/Photo/img 1.jpg";
 import img2 from "@/app/Photo/img 2.jpg";
 import img3 from "@/app/Photo/img 3.jpg";
 
-const keyPractices = [
+const services = [
   {
-    icon: "✅",
-    title: "Comprehensive Testing",
-    desc: "We conduct multiple levels of testing, including functional, performance, security, and usability testing, to ensure that every aspect of the product meets expectations.",
+    icon: "⚙️",
+    title: "Implementation",
+    content: [
+      "ERP Implementation helps organizations streamline and automate their business processes by integrating various functions such as finance, HR, inventory, procurement, sales, and operations into a single centralized system.",
+      "A successful ERP implementation improves operational efficiency, enhances data accuracy, enables real-time reporting, and supports better decision-making across the organization.",
+    ],
   },
   {
-    icon: "🤖",
-    title: "Automation & Tools",
-    desc: "By leveraging modern automation tools, we enhance efficiency, accuracy, and speed in our testing processes.",
+    icon: "🧩",
+    title: "Custom Development",
+    content: [
+      "ERP Custom Development enables businesses to build tailored ERP solutions that align perfectly with their unique workflows, operational requirements, and industry-specific processes. Unlike standard ERP systems, custom ERP development provides flexibility to add personalized modules, automate complex tasks, integrate third-party applications, and scale as the business grows.",
+      "Our ERP custom development services focus on designing user-friendly, secure, and scalable solutions that improve efficiency, enhance productivity, and provide real-time business insights. From finance and inventory management to HR, CRM, and reporting dashboards, we develop customized ERP applications that help organizations streamline operations and achieve better business performance.",
+    ],
   },
   {
-    icon: "🔄",
-    title: "Continuous Improvement",
-    desc: "We regularly review and refine our QA methodologies to adapt to evolving technologies and industry best practices.",
+    icon: "⬆️",
+    title: "Upgrade",
+    content: [
+      "ERP Upgrade services help organizations modernize their existing ERP systems with the latest features, improved performance, enhanced security, and better user experience. Upgrading an ERP system ensures compatibility with current technologies, improves operational efficiency, and enables businesses to leverage advanced capabilities such as automation, analytics, cloud integration, and real-time reporting.",
+      "Our ERP upgrade solutions focus on seamless migration, minimal business disruption, data integrity, and optimized system performance. We help businesses transition smoothly from legacy systems to upgraded platforms while ensuring scalability, reliability, and improved productivity to support future business growth.",
+    ],
   },
   {
-    icon: "📋",
-    title: "Compliance & Standards",
-    desc: "Our processes align with recognized industry standards, ensuring that our deliverables meet regulatory and quality benchmarks.",
+    icon: "🌐",
+    title: "Global Rollout",
+    content: [
+      "ERP Global Rollout services help organizations successfully deploy and standardize ERP systems across multiple locations, regions, and business units worldwide. A global ERP rollout ensures consistent business processes, centralized data management, regulatory compliance, and improved collaboration across international operations.",
+      "Our ERP global rollout approach focuses on strategic planning, localization, multi-country compliance, seamless data migration, user training, and change management to ensure smooth implementation across global teams. We help businesses achieve operational consistency, enhanced visibility, and scalable growth through efficient and well-managed ERP deployment strategies.",
+    ],
+  },
+  {
+    icon: "🛡️",
+    title: "Support",
+    content: [
+      "ERP Support services ensure the smooth functioning, maintenance, and continuous improvement of ERP systems to help businesses operate efficiently without disruptions. Effective ERP support helps organizations resolve technical issues quickly, optimize system performance, manage updates, and ensure users can maximize the value of the ERP platform.",
+      "Our ERP support solutions include system monitoring, troubleshooting, performance optimization, user assistance, bug fixing and ongoing maintenance with agreed SLAs. We provide reliable and proactive support to ensure business continuity, improved productivity, and seamless ERP operations tailored to evolving business needs.",
+    ],
   },
 ];
 
-export default function QualityAssurance() {
+export default function ERPService() {
   return (
     <div className="min-h-screen bg-[#f4f8fd] flex flex-col">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=DM+Sans:wght@400;500;600&display=swap');
-        *, body { font-family: 'DM Sans', sans-serif; }
+        * { font-family: 'DM Sans', sans-serif; }
         .sora { font-family: 'Sora', sans-serif; }
 
         @keyframes fadeLeft {
@@ -68,6 +88,7 @@ export default function QualityAssurance() {
 
         .d1{animation-delay:0.05s} .d2{animation-delay:0.13s}
         .d3{animation-delay:0.21s} .d4{animation-delay:0.29s}
+        .d5{animation-delay:0.37s}
 
         .geo-ring {
           position: absolute; border-radius: 50%;
@@ -100,53 +121,34 @@ export default function QualityAssurance() {
         .dot-row span:nth-child(2) { opacity: 0.5; }
         .dot-row span:nth-child(3) { opacity: 0.25; }
 
-        /* Practice card */
-        .practice-card {
+        /* Service cards */
+        .svc-card {
           background: white; border-radius: 22px;
-          padding: 28px 24px; border: 1.5px solid #e8f0fb;
+          border: 1.5px solid #e8f0fb;
           transition: all 0.32s cubic-bezier(0.4,0,0.2,1);
-          position: relative; overflow: hidden; height: 100%;
+          position: relative; overflow: hidden;
         }
-        .practice-card::after {
+        .svc-card::after {
           content: ''; position: absolute;
-          bottom: 0; left: 0; right: 0; height: 3px;
-          background: linear-gradient(90deg, #1a6fc4, #17b8e0);
-          transform: scaleX(0); transform-origin: left;
+          left: 0; top: 0; bottom: 0; width: 4px;
+          background: linear-gradient(180deg, #1a6fc4, #17b8e0);
+          transform: scaleY(0); transform-origin: top;
           transition: transform 0.35s ease;
         }
-        .practice-card:hover::after { transform: scaleX(1); }
-        .practice-card:hover {
-          transform: translateY(-7px);
-          box-shadow: 0 22px 60px rgba(26,111,196,0.14);
+        .svc-card:hover::after { transform: scaleY(1); }
+        .svc-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 22px 60px rgba(26,111,196,0.13);
           border-color: rgba(26,111,196,0.2);
         }
-        .practice-icon {
+        .svc-icon {
           width: 56px; height: 56px; border-radius: 16px;
           background: linear-gradient(135deg, #eef4fd, #daeeff);
           display: flex; align-items: center; justify-content: center;
-          font-size: 26px; margin-bottom: 16px;
+          font-size: 26px; flex-shrink: 0;
           transition: transform 0.3s ease;
         }
-        .practice-card:hover .practice-icon { transform: scale(1.1) rotate(-5deg); }
-
-        /* Commitment block */
-        .commit-block {
-          background: white; border-radius: 20px;
-          padding: 26px 24px; border: 1.5px solid #e8f0fb;
-          transition: all 0.3s ease;
-          display: flex; align-items: flex-start; gap: 16px;
-        }
-        .commit-block:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 16px 45px rgba(26,111,196,0.12);
-          border-color: rgba(26,111,196,0.2);
-        }
-        .commit-num {
-          font-family: 'Sora', sans-serif; font-size: 28px; font-weight: 800;
-          background: linear-gradient(135deg, #1a6fc4, #17b8e0);
-          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-          flex-shrink: 0; line-height: 1.1;
-        }
+        .svc-card:hover .svc-icon { transform: scale(1.08) rotate(-4deg); }
 
         /* Image stack */
         .img-main {
@@ -199,18 +201,17 @@ export default function QualityAssurance() {
                 Nexora Technology Services Pvt Ltd
               </p>
               <h1 className="fade-left sora text-4xl md:text-5xl text-white mb-5 leading-tight d2" style={{ fontWeight: 800 }}>
-                Quality<br />
-                <span style={{ color: "#a5f3fc" }}>Assurance</span>
+                Enterprise Resource<br />
+                <span style={{ color: "#a5f3fc" }}>Planning (ERP)</span>
               </h1>
               <p className="fade-left text-blue-100 text-base leading-relaxed max-w-lg mb-8 d3" style={{ opacity: 0.9 }}>
-                Quality Assurance is more than just a process — it is a commitment to delivering
-                excellence at every stage. We believe quality is built into a product from the very
-                beginning, not just tested at the end.
+                End-to-end ERP services — from implementation and custom development to upgrades,
+                global rollout, and ongoing support — designed to transform how your business operates.
               </p>
               <div className="fade-up d4 flex flex-wrap gap-4">
                 <Link href="/contact" className="cta-btn"
                   style={{ background: "white", color: "#1a6fc4", boxShadow: "0 8px 28px rgba(0,0,0,0.15)" }}>
-                  Get in Touch
+                  Get Started
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -222,21 +223,19 @@ export default function QualityAssurance() {
               </div>
             </div>
 
-            {/* Right: stat blocks */}
-            <div className="fade-right hidden lg:flex flex-col gap-4 d2">
-              {[
-                { icon: "🛡️", label: "Reliability", value: "Built-In", sub: "From day one, not afterthought" },
-                { icon: "🎯", label: "Customer Satisfaction", value: "First Priority", sub: "Feedback-driven quality" },
-                { icon: "📐", label: "Industry Standards", value: "Compliant", sub: "Regulatory benchmarks met" },
-              ].map((s, i) => (
-                <div key={i} className="flex items-center gap-4 rounded-2xl px-6 py-4"
+            {/* Right: service name pills */}
+            <div className="fade-right hidden lg:flex flex-col gap-3 d2">
+              {services.map((s, i) => (
+                <div key={i} className="flex items-center gap-4 rounded-2xl px-5 py-3"
                   style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)", backdropFilter: "blur(10px)" }}>
-                  <span className="text-3xl">{s.icon}</span>
-                  <div className="flex-1">
-                    <p className="text-blue-200 text-xs uppercase tracking-widest" style={{ opacity: 0.75 }}>{s.label}</p>
-                    <p className="sora text-white text-base" style={{ fontWeight: 800 }}>{s.value}</p>
+                  <span className="text-2xl">{s.icon}</span>
+                  <p className="sora text-white text-sm" style={{ fontWeight: 700 }}>{s.title}</p>
+                  <div className="ml-auto w-5 h-5 rounded-full flex items-center justify-center"
+                    style={{ background: "rgba(255,255,255,0.15)" }}>
+                    <svg className="w-3 h-3 text-cyan-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
-                  <p className="text-cyan-200 text-xs text-right max-w-[100px]" style={{ opacity: 0.7 }}>{s.sub}</p>
                 </div>
               ))}
             </div>
@@ -253,28 +252,23 @@ export default function QualityAssurance() {
 
           {/* Left: text */}
           <div className="flex-1 fade-left">
-            <div className="section-label">Our Approach</div>
+            <div className="section-label">Our ERP Services</div>
             <div className="dot-row"><span /><span /><span /></div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] mb-5 leading-snug" style={{ fontWeight: 800 }}>
-              Structured, Proactive<br />
+              Complete ERP Solutions<br />
               <span style={{ background: "linear-gradient(90deg,#1a6fc4,#17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Quality Assurance
+                Tailored to Your Business
               </span>
             </h2>
-            <p className="text-slate-600 text-base leading-relaxed mb-5">
-              We follow a structured and proactive approach to quality assurance, integrating it
-              throughout the entire development lifecycle. From initial planning and design to
-              development, testing, and deployment, our QA team works closely with all stakeholders
-              to identify potential issues early and ensure consistent standards.
-            </p>
-            <p className="text-slate-600 text-base leading-relaxed mb-8">
-              Our QA practices are designed to ensure reliability, performance, and customer satisfaction
-              at every stage of our work.
+            <p className="text-slate-600 text-base leading-relaxed mb-6">
+              From first implementation to global deployment and long-term support, Nexora delivers
+              enterprise-grade ERP services that streamline operations, unify data, and power smarter
+              decisions across your entire organization.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/contact" className="cta-btn"
                 style={{ background: "linear-gradient(135deg,#1a6fc4,#17b8e0)", color: "white", boxShadow: "0 6px 22px rgba(26,111,196,0.35)" }}>
-                Talk to Our QA Team <span>→</span>
+                Talk to an Expert <span>→</span>
               </Link>
               <Link href="/about" className="cta-btn"
                 style={{ color: "#1a6fc4", border: "2px solid rgba(26,111,196,0.25)", background: "transparent" }}>
@@ -289,52 +283,68 @@ export default function QualityAssurance() {
             <div className="deco-ring" style={{ width: 270, height: 270, top: "50%", left: "50%", transform: "translate(-50%,-50%)", animationDirection: "reverse", opacity: 0.55 }} />
 
             <div className="img-main" style={{ width: 360, height: 280, marginTop: 40 }}>
-              <Image src={img1} alt="Quality Assurance" fill style={{ objectFit: "cover" }} />
+              <Image src={img1} alt="ERP Services" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 190, height: 140, bottom: 10, left: "3%" }}>
-              <Image src={img2} alt="QA testing" fill style={{ objectFit: "cover" }} />
+              <Image src={img2} alt="ERP Implementation" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 160, height: 118, top: 0, right: "2%" }}>
-              <Image src={img3} alt="QA standards" fill style={{ objectFit: "cover" }} />
+              <Image src={img3} alt="ERP Support" fill style={{ objectFit: "cover" }} />
             </div>
 
             <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
-              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Zero Defect Goal</p>
-              <p className="text-slate-500 text-[11px]">Every Delivery</p>
+              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">500+ Projects</p>
+              <p className="text-slate-500 text-[11px]">Delivered Globally</p>
             </div>
             <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
-              <p className="sora text-xs font-bold text-white mb-0.5">End-to-End QA</p>
-              <p className="text-cyan-100 text-[11px]">Full Lifecycle</p>
+              <p className="sora text-xs font-bold text-white mb-0.5">End-to-End</p>
+              <p className="text-cyan-100 text-[11px]">ERP Services</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ═══════════════════════════════
-          KEY PRACTICES
+          SERVICES — alternating layout
       ═══════════════════════════════ */}
       <section className="py-20 px-4 bg-[#f4f8fd]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14 fade-up">
-            <div className="section-label" style={{ margin: "0 auto 14px" }}>Key Practices</div>
+            <div className="section-label" style={{ margin: "0 auto 14px" }}>What We Offer</div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
-              How We Ensure Quality
+              Our ERP Service Areas
             </h2>
             <p className="text-slate-500 mt-3 text-sm max-w-xl mx-auto leading-relaxed">
-              Our QA framework is built on four core practices that together ensure every product
-              we deliver meets the highest standards.
+              Comprehensive ERP services that cover every stage of your enterprise technology journey.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {keyPractices.map((p, i) => (
-              <div key={p.title} className={`practice-card fade-up d${i + 1}`}>
-                <div className="practice-icon">{p.icon}</div>
-                <h3 className="sora text-base text-[#1e3a5f] mb-3 leading-snug" style={{ fontWeight: 700 }}>
-                  {p.title}
-                </h3>
-                <p className="text-slate-500 text-sm leading-relaxed">{p.desc}</p>
+          <div className="flex flex-col gap-5">
+            {services.map((svc, i) => (
+              <div key={svc.title} className={`svc-card fade-up d${(i % 5) + 1}`}>
+                <div className="flex flex-col md:flex-row gap-6 p-8 items-start">
+                  {/* Icon + title */}
+                  <div className="flex-shrink-0 flex flex-col items-center md:items-start gap-3 w-full md:w-48">
+                    <div className="svc-icon">{svc.icon}</div>
+                    <h3 className="sora text-lg text-[#1e3a5f] leading-snug text-center md:text-left" style={{ fontWeight: 800 }}>
+                      {svc.title}
+                    </h3>
+                    <div className="hidden md:block w-8 h-0.5 rounded-full"
+                      style={{ background: "linear-gradient(90deg,#1a6fc4,#17b8e0)" }} />
+                  </div>
+
+                  {/* Vertical divider */}
+                  <div className="hidden md:block w-px self-stretch"
+                    style={{ background: "linear-gradient(180deg, transparent, #e8f0fb 20%, #e8f0fb 80%, transparent)" }} />
+
+                  {/* Content */}
+                  <div className="flex-1 flex flex-col gap-3">
+                    {svc.content.map((para, j) => (
+                      <p key={j} className="text-slate-600 text-sm leading-relaxed">{para}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -342,48 +352,40 @@ export default function QualityAssurance() {
       </section>
 
       {/* ═══════════════════════════════
-          CUSTOMER-CENTRIC + COMMITMENT + SECOND IMAGE
+          SECOND IMAGE STRIP
       ═══════════════════════════════ */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
 
-          {/* Left: two content blocks */}
+          {/* Left: points */}
           <div className="flex-1 fade-left">
-            <div className="section-label">Our Focus &amp; Commitment</div>
+            <div className="section-label">Why Nexora ERP</div>
             <div className="dot-row"><span /><span /><span /></div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] mb-8 leading-snug" style={{ fontWeight: 800 }}>
-              Quality Defined by<br />
+              A Trusted Partner<br />
               <span style={{ background: "linear-gradient(90deg,#1a6fc4,#17b8e0)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                Customer Success
+                Across the ERP Lifecycle
               </span>
             </h2>
 
             <div className="flex flex-col gap-5">
-              {/* Customer-Centric block */}
-              <div className="commit-block">
-                <div className="commit-num">01</div>
-                <div>
-                  <p className="sora text-[#1e3a5f] font-bold text-sm mb-2">Customer-Centric Focus</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">
-                    Quality for us is defined by customer satisfaction. We actively gather feedback,
-                    analyse user behaviour, and implement improvements to deliver products that truly
-                    meet user needs.
-                  </p>
+              {[
+                { icon: "✅", title: "Single Partner, Full Lifecycle", desc: "From implementation through support — one team that knows your system inside out." },
+                { icon: "🌍", title: "Global Reach, Local Expertise", desc: "Multi-country rollout capabilities with localization, compliance, and regional best practices." },
+                { icon: "🔒", title: "Secure & Scalable", desc: "Every solution is built with enterprise-grade security and designed to scale as you grow." },
+                { icon: "📈", title: "Proven Results", desc: "500+ successful ERP projects across industries with measurable improvements in efficiency and ROI." },
+              ].map(({ icon, title, desc }) => (
+                <div key={title} className="flex gap-4 items-start">
+                  <div className="flex-shrink-0 rounded-2xl flex items-center justify-center text-xl"
+                    style={{ width: 46, height: 46, background: "linear-gradient(135deg,#eef4fd,#daeeff)" }}>
+                    {icon}
+                  </div>
+                  <div>
+                    <p className="sora text-[#1e3a5f] font-bold text-sm mb-1">{title}</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+                  </div>
                 </div>
-              </div>
-
-              {/* Commitment block */}
-              <div className="commit-block">
-                <div className="commit-num">02</div>
-                <div>
-                  <p className="sora text-[#1e3a5f] font-bold text-sm mb-2">Our Commitment</p>
-                  <p className="text-slate-500 text-sm leading-relaxed">
-                    We are dedicated to delivering solutions that are not only functional but also
-                    reliable, secure, and scalable. Through rigorous quality assurance practices,
-                    we strive to exceed expectations and build long-term trust with our clients.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -392,23 +394,23 @@ export default function QualityAssurance() {
             <div className="deco-ring" style={{ width: 340, height: 340, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
 
             <div className="img-main" style={{ width: 340, height: 260, marginTop: 50 }}>
-              <Image src={img3} alt="Customer satisfaction" fill style={{ objectFit: "cover" }} />
+              <Image src={img3} alt="ERP global rollout" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 175, height: 130, top: 0, right: "4%" }}>
-              <Image src={img2} alt="QA commitment" fill style={{ objectFit: "cover" }} />
+              <Image src={img2} alt="ERP upgrade" fill style={{ objectFit: "cover" }} />
             </div>
             <div className="img-accent" style={{ width: 155, height: 115, bottom: 20, left: "4%" }}>
-              <Image src={img1} alt="Reliable solutions" fill style={{ objectFit: "cover" }} />
+              <Image src={img1} alt="ERP support" fill style={{ objectFit: "cover" }} />
             </div>
 
             <div className="float-badge" style={{ top: 14, left: "6%", animationDelay: "0.8s" }}>
-              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Long-Term Trust</p>
-              <p className="text-slate-500 text-[11px]">Built with Clients</p>
+              <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">12+ Years</p>
+              <p className="text-slate-500 text-[11px]">ERP Expertise</p>
             </div>
             <div className="float-badge"
               style={{ bottom: 30, right: "5%", animationDelay: "1.4s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
-              <p className="sora text-xs font-bold text-white mb-0.5">Exceed Expectations</p>
-              <p className="text-cyan-100 text-[11px]">Every Delivery</p>
+              <p className="sora text-xs font-bold text-white mb-0.5">20+ Countries</p>
+              <p className="text-cyan-100 text-[11px]">Global Rollouts</p>
             </div>
           </div>
         </div>
@@ -428,15 +430,15 @@ export default function QualityAssurance() {
 
         <div className="max-w-3xl mx-auto text-center relative z-10 fade-up">
           <p className="sora text-xs tracking-[0.22em] text-cyan-300 uppercase mb-3 font-semibold">
-            Quality You Can Trust
+            Ready to Transform?
           </p>
           <h2 className="sora text-3xl md:text-5xl text-white mb-5 leading-tight" style={{ fontWeight: 800 }}>
-            Let&apos;s Build Something<br />
-            <span style={{ color: "#a5f3fc" }}>Reliable & Scalable</span>
+            Let&apos;s Build Your<br />
+            <span style={{ color: "#a5f3fc" }}>ERP Success Story</span>
           </h2>
           <p className="text-blue-200 text-base leading-relaxed mb-10 max-w-xl mx-auto" style={{ opacity: 0.88 }}>
-            Partner with Nexora for rigorous quality assurance that ensures every solution we
-            deliver is functional, secure, scalable, and built to exceed your expectations.
+            Partner with Nexora for end-to-end ERP services that deliver real results — from your
+            first implementation to global scale and beyond.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="cta-btn"
