@@ -299,7 +299,7 @@ export default function ProductDevelopment() {
             </div>
 
             {/* Right: stat blocks */}
-            <div className="fade-right hidden lg:flex flex-col gap-4 d2">
+            {/* <div className="fade-right hidden lg:flex flex-col gap-4 d2">
               {[
                 { icon: "🌐", label: "Web & Mobile Apps Built", value: "300+", sub: "Across industries" },
                 { icon: "⚙️", label: "Enterprise Solutions", value: "150+", sub: "Deployed globally" },
@@ -315,7 +315,7 @@ export default function ProductDevelopment() {
                   <p className="text-cyan-200 text-xs" style={{ opacity: 0.7 }}>{s.sub}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -378,11 +378,11 @@ export default function ProductDevelopment() {
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Future-Ready</p>
               <p className="text-slate-500 text-[11px]">Secure & Scalable</p>
             </div>
-            <div className="float-badge"
+            {/* <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">300+ Solutions</p>
               <p className="text-cyan-100 text-[11px]">Delivered Globally</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

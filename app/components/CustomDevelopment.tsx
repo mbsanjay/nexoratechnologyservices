@@ -248,7 +248,7 @@ export default function CustomDevelopment() {
               </div>
             </div>
 
-            <div className="fade-right hidden lg:flex flex-col gap-4 d2">
+            {/* <div className="fade-right hidden lg:flex flex-col gap-4 d2">
               {[
                 { icon: "🧩", label: "Custom Modules Built", value: "200+", sub: "Across ERP platforms" },
                 { icon: "⚡", label: "Faster Operations", value: "40%", sub: "Average efficiency gain" },
@@ -264,7 +264,7 @@ export default function CustomDevelopment() {
                   <p className="text-cyan-200 text-xs" style={{ opacity: 0.7 }}>{s.sub}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -329,11 +329,11 @@ export default function CustomDevelopment() {
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">Scalable Solutions</p>
               <p className="text-slate-500 text-[11px]">Built for Growth</p>
             </div>
-            <div className="float-badge"
+            {/* <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">200+ Modules</p>
               <p className="text-cyan-100 text-[11px]">Delivered Globally</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

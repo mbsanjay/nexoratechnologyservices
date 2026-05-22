@@ -306,7 +306,7 @@ export default function TalentAcquisition() {
 
             {/* Right: Stats */}
             <div className="fade-right hidden lg:flex flex-col gap-5">
-              <div className="grid grid-cols-3 gap-4">
+              {/* <div className="grid grid-cols-3 gap-4">
                 {[
                   { value: "500+", label: "Placements Made" },
                   { value: "72h", label: "Avg. Shortlist Time" },
@@ -318,7 +318,7 @@ export default function TalentAcquisition() {
                     <p className="text-cyan-200 text-xs uppercase tracking-wide" style={{ opacity: 0.85 }}>{s.label}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               <div className="rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)" }}>
                 <p className="sora text-white text-sm mb-4" style={{ fontWeight: 700 }}>From Entry-Level to Leadership</p>

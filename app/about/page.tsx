@@ -337,9 +337,9 @@ export default function About() {
               We Build Technology<br />
               <span style={{ color: "#a5f3fc" }}>That Moves Business</span>
             </h1>
-            <p className="text-blue-100 text-lg max-w-lg leading-relaxed mb-8" style={{ opacity: 0.88 }}>
+            {/* <p className="text-blue-100 text-lg max-w-lg leading-relaxed mb-8" style={{ opacity: 0.88 }}>
               Founded in 2012, Nexora has grown into a trusted technology partner for 500+ companies across 20+ countries.
-            </p>
+            </p> */}
             {/* Quick Stats Row */}
             {/* <div className="flex gap-8 flex-wrap">
               {[["500+", "Projects"], ["12+", "Years"], ["50+", "Experts"], ["98%", "Satisfaction"]].map(([n, l], i) => (

@@ -318,7 +318,7 @@ export default function Organization() {
             to support, training, and beyond.
           </p>
 
-          <div className="fade-up d4 flex flex-wrap gap-6">
+          {/* <div className="fade-up d4 flex flex-wrap gap-6">
             {[["500+", "Projects Delivered"], ["12+", "Years of Expertise"], ["50+", "Specialists"], ["98%", "Client Satisfaction"]].map(
               ([n, l], i) => (
                 <div key={i} className="text-center">
@@ -327,7 +327,7 @@ export default function Organization() {
                 </div>
               )
             )}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -404,10 +404,10 @@ export default function Organization() {
                 <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">ISO Certified</p>
                 <p className="text-slate-500 text-[11px]">Quality Assured</p>
               </div>
-              <div className="float-badge" style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
+              {/* <div className="float-badge" style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
                 <p className="sora text-xs font-bold text-white mb-0.5">500+ Projects</p>
                 <p className="text-cyan-100 text-[11px]">Delivered Globally</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

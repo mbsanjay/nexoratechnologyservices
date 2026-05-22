@@ -637,7 +637,7 @@ export default function Home() {
                 <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, transparent 60%, rgba(26,111,196,0.28) 100%)" }} />
               </div>
 
-              <div className="float-badge" style={{ top: 20, left: -24 }}>
+              {/* <div className="float-badge" style={{ top: 20, left: -24 }}>
                 <div className="flex items-center gap-2">
                   <div className="about-deco-dot" />
                   <div>
@@ -645,7 +645,7 @@ export default function Home() {
                     <p className="text-slate-400" style={{ fontSize: "10px" }}>Successfully Delivered</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               <div className="float-badge" style={{ bottom: 80, right: -24, animationDelay: "2s" }}>
                 <div className="flex items-center gap-2">
@@ -657,14 +657,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-3 mt-5 justify-center flex-wrap">
+              {/* <div className="flex gap-3 mt-5 justify-center flex-wrap">
                 {[{ n: "12+", l: "Years" }, { n: "50+", l: "Team" }, { n: "20+", l: "Countries" }].map((s, i) => (
                   <div key={i} className="about-stat-chip text-center min-w-[80px]">
                     <p className="sora text-lg text-[#1a6fc4]" style={{ fontWeight: 800 }}>{s.n}</p>
                     <p className="text-slate-400 text-xs uppercase tracking-wide">{s.l}</p>
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -771,9 +771,9 @@ export default function Home() {
             Ready to Build Something<br />
             <span style={{ color: "#a5f3fc" }}>Extraordinary?</span>
           </h2>
-          <p className="text-blue-100 text-lg mb-4 max-w-xl mx-auto" style={{ opacity: 0.9 }}>
+          {/* <p className="text-blue-100 text-lg mb-4 max-w-xl mx-auto" style={{ opacity: 0.9 }}>
             Join 500+ companies who trusted Nexora to build their digital future.
-          </p>
+          </p> */}
           <p className="text-cyan-200 text-sm mb-10 font-semibold tracking-wide">
             Build with Nexora. Grow without limits.
           </p>

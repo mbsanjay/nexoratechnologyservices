@@ -47,7 +47,7 @@ export default function Navbar() {
         { name: "Leaders", href: "/about" },
       ],
     },
-    { label: "Media & Investors", href: "/media-investors" },
+    { label: "Media & Investors", href: "/components/Media" },
     {
       label: "What We Serve",
       children: [
@@ -79,10 +79,10 @@ export default function Navbar() {
     {
       label: "Life @NTS",
       children: [
-        { name: "Working @ NTS", href: "/life-at-nts/working-at-nts" },
+        { name: "Working @ NTS", href: "/components/WorkingAtNTS" },
       ],
     },
-    { label: "Careers", href: "/careers" },
+    { label: "Careers", href: "/components/Careers" },
     { label: "Contact Us", href: "/contact" },
   ];
 

@@ -350,10 +350,10 @@ export default function IndustriesServed() {
               <Image src={img3} alt="Domain solutions" fill style={{ objectFit: "cover" }} />
             </div>
 
-            <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
+            {/* <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">500+ Projects</p>
               <p className="text-slate-500 text-[11px]">Across Industries</p>
-            </div>
+            </div> */}
             <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">7 Sectors</p>

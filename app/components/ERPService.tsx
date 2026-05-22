@@ -292,10 +292,10 @@ export default function ERPService() {
               <Image src={img3} alt="ERP Support" fill style={{ objectFit: "cover" }} />
             </div>
 
-            <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
+            {/* <div className="float-badge" style={{ bottom: 62, right: "5%", animationDelay: "1.2s" }}>
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">500+ Projects</p>
               <p className="text-slate-500 text-[11px]">Delivered Globally</p>
-            </div>
+            </div> */}
             <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">End-to-End</p>
@@ -373,7 +373,7 @@ export default function ERPService() {
                 { icon: "✅", title: "Single Partner, Full Lifecycle", desc: "From implementation through support — one team that knows your system inside out." },
                 { icon: "🌍", title: "Global Reach, Local Expertise", desc: "Multi-country rollout capabilities with localization, compliance, and regional best practices." },
                 { icon: "🔒", title: "Secure & Scalable", desc: "Every solution is built with enterprise-grade security and designed to scale as you grow." },
-                { icon: "📈", title: "Proven Results", desc: "500+ successful ERP projects across industries with measurable improvements in efficiency and ROI." },
+                // { icon: "📈", title: "Proven Results", desc: "500+ successful ERP projects across industries with measurable improvements in efficiency and ROI." },
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="flex gap-4 items-start">
                   <div className="flex-shrink-0 rounded-2xl flex items-center justify-center text-xl"
@@ -403,15 +403,15 @@ export default function ERPService() {
               <Image src={img1} alt="ERP support" fill style={{ objectFit: "cover" }} />
             </div>
 
-            <div className="float-badge" style={{ top: 14, left: "6%", animationDelay: "0.8s" }}>
+            {/* <div className="float-badge" style={{ top: 14, left: "6%", animationDelay: "0.8s" }}>
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">12+ Years</p>
               <p className="text-slate-500 text-[11px]">ERP Expertise</p>
-            </div>
-            <div className="float-badge"
+            </div> */}
+            {/* <div className="float-badge"
               style={{ bottom: 30, right: "5%", animationDelay: "1.4s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">20+ Countries</p>
               <p className="text-cyan-100 text-[11px]">Global Rollouts</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
