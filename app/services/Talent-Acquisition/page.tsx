@@ -240,6 +240,16 @@ export default function TalentAcquisition() {
           text-decoration: none;
         }
 
+        /* ═══════════════════
+           MOBILE
+        ═══════════════════ */
+        @media (max-width: 767px) {
+          .img-accent  { display: none !important; }
+          .float-badge { display: none !important; }
+          .deco-ring   { display: none !important; }
+          .img-main    { width: 100% !important; }
+        }
+
         .img-stack { position: relative; }
         .img-main {
           border-radius: 24px; overflow: hidden;

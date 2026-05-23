@@ -67,7 +67,7 @@ export default function Navbar() {
             },
             { name: "Cloud Services", href: "/services/cloud-solution" },
             { name: "Consulting", href: "/components/Consulting" },
-            { name: "Cyber Security", href: "/what-we-serve/services/cyber-security" },
+            // { name: "Cyber Security", href: "/what-we-serve/services/cyber-security" },
             { name: "Quality Assurance", href: "/services/Quality-Assurance" },
           ],
         },
@@ -82,7 +82,7 @@ export default function Navbar() {
         { name: "Working @ NTS", href: "/components/WorkingAtNTS" },
       ],
     },
-    // { label: "Careers", href: "/components/Careers" },
+    { label: "Careers", href: "/components/Careers" },
     { label: "Contact Us", href: "/contact" },
   ];
 
@@ -241,7 +241,7 @@ export default function Navbar() {
                         position: "absolute",
                         left: 0,
                         top: "calc(100% + 8px)",
-                        width: 230,
+                        width: 200,
                         borderRadius: 12,
                         zIndex: 50,
                         ...FLYOUT_STYLES,
@@ -270,7 +270,7 @@ export default function Navbar() {
                                       position: "absolute",
                                       left: "100%",
                                       top: 0,
-                                      width: 230,
+                                      width: 195,
                                       borderRadius: 12,
                                       zIndex: 60,
                                       ...FLYOUT_STYLES,
@@ -289,17 +289,18 @@ export default function Navbar() {
                                             >
                                               <DotAccent />
                                               <span style={{ flex: 1 }}>{subItem.name}</span>
-                                              <svg style={{ marginLeft: "auto", opacity: 0.45 }} width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" /></svg>
+                                              {/* Arrow points RIGHT — submenu opens right */}
+                                              <svg style={{ marginLeft: "auto", opacity: 0.45 }} width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" /></svg>
 
-                                              {/* Level-3 flyout — opens leftward */}
+                                              {/* Level-3 flyout — opens rightward */}
                                               {isSubSubOpen && (
                                                 <div
                                                   className="flyout-panel"
                                                   style={{
                                                     position: "absolute",
-                                                    right: "100%",
+                                                    left: "100%",
                                                     top: 0,
-                                                    width: 220,
+                                                    width: 185,
                                                     borderRadius: 12,
                                                     zIndex: 70,
                                                     ...FLYOUT_STYLES,

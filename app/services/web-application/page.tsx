@@ -308,6 +308,15 @@ export default function WebMobileDevelopment() {
           cursor: pointer; transition: all 0.3s ease; border: none;
           text-decoration: none;
         }
+
+        /* ═══════════════════
+           MOBILE
+        ═══════════════════ */
+        @media (max-width: 767px) {
+          .float-badge { display: none !important; }
+          .deco-ring   { display: none !important; }
+          .img-main    { width: 100% !important; }
+        }
       `}</style>
 
       {/* ══════════════════════════════
@@ -691,7 +700,7 @@ export default function WebMobileDevelopment() {
       <footer className="w-full py-8 px-4 text-center"
         style={{ background: "linear-gradient(135deg, #0a1e3d, #0f3460)", fontSize: "13px" }}>
         <p className="sora text-slate-500">
-          © 2024 Nexora Technology Services Pvt. Ltd. All rights reserved.
+          © 2026 Nexora Technology Services Pvt. Ltd. All rights reserved.
         </p>
       </footer>
     </div>

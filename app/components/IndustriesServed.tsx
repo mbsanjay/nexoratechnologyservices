@@ -215,6 +215,17 @@ export default function IndustriesServed() {
           font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700;
           transition: all 0.3s ease; text-decoration: none; cursor: pointer; border: none;
         }
+
+        /* ═══════════════════
+           MOBILE
+        ═══════════════════ */
+        @media (max-width: 767px) {
+          .img-accent     { display: none !important; }
+          .float-badge    { display: none !important; }
+          .deco-ring      { display: none !important; }
+          .img-stack-wrapper { min-height: 240px !important; }
+          .img-main       { width: 100% !important; margin-top: 0 !important; height: 220px !important; }
+        }
       `}</style>
 
       {/* ═══════════════════════════════
@@ -336,7 +347,7 @@ export default function IndustriesServed() {
           </div>
 
           {/* Right: images */}
-          <div className="flex-1 fade-right relative flex justify-center" style={{ minHeight: 460 }}>
+          <div className="flex-1 fade-right relative flex justify-center img-stack-wrapper" style={{ minHeight: 460 }}>
             <div className="deco-ring" style={{ width: 380, height: 380, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
             <div className="deco-ring" style={{ width: 270, height: 270, top: "50%", left: "50%", transform: "translate(-50%,-50%)", animationDirection: "reverse", opacity: 0.55 }} />
 

@@ -553,7 +553,7 @@ export default function Contact() {
         className="py-8 px-4 text-center"
         style={{ background: "linear-gradient(135deg, #0f3460, #1a4f8c)", color: "rgba(255,255,255,0.6)", fontSize: "13px" }}
       >
-        <p className="sora">© 2024 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
+        <p className="sora">© 2026 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
       </footer>
     </div>
   );

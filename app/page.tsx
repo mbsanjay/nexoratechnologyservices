@@ -828,15 +828,15 @@ export default function Home() {
                 Contact
               </h3>
               <div className="space-y-2 text-slate-400 text-sm">
-                <p>info@nexora.com</p>
-                <p>+91 (555) 123-4567</p>
+                <p>info@nexoratechnology.co.in</p>
+                <p>+91 000-0000-000</p>
                 <p>Bengaluru, Karnataka, India</p>
               </div>
             </div>
           </div>
           <div className="pt-8 text-center text-slate-500 text-xs"
             style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-            <p className="sora">© 2024 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
+            <p className="sora">© 2026 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
           </div>
         </div>
       </footer>

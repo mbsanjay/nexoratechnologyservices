@@ -442,13 +442,12 @@ export default function CareersPage() {
           </span>
         </div>
 
-        {/* Headline */}
+        {/* Headline — single row */}
         <h1
-          className="sora cs-fu cs-d2 font-black leading-none mb-5"
-          style={{ fontSize:"clamp(3rem,9vw,6.2rem)", maxWidth:760, lineHeight:1.05 }}
+          className="sora cs-fu cs-d2 font-black leading-none mb-5 whitespace-nowrap"
+          style={{ fontSize:"clamp(2rem,6.5vw,4.8rem)", lineHeight:1.08 }}
         >
-          <span className="cs-grad">Your Next</span>
-          <br />
+          <span className="cs-grad">Your Next </span>
           <span style={{ color:"white" }}>Big Move.</span>
         </h1>
 
@@ -671,7 +670,7 @@ export default function CareersPage() {
           color:"rgba(255,255,255,0.50)", fontSize:"13px",
         }}
       >
-        <p className="sora">© 2024 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
+        <p className="sora">© 2026 Nexora Technology Services Pvt. Ltd. All rights reserved.</p>
       </footer>
     </div>
   );
