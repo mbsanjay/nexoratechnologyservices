@@ -472,7 +472,7 @@ export default function CareersPage() {
         </div>
 
         {/* Countdown */}
-        <div className="cs-fu cs-d4 mb-10">
+        {/* <div className="cs-fu cs-d4 mb-10">
           <p className="sora text-xs uppercase tracking-[0.18em] text-cyan-200 mb-4 font-semibold">
             Launching In
           </p>
@@ -485,10 +485,10 @@ export default function CareersPage() {
             <span className="cs-sep">:</span>
             <CountBox value={timeLeft.seconds} label="Seconds" />
           </div>
-        </div>
+        </div> */}
 
         {/* Email subscribe */}
-        <div className="cs-fu cs-d5 w-full max-w-md mb-3">
+        {/* <div className="cs-fu cs-d5 w-full max-w-md mb-3">
           {subscribed ? (
             <div
               className="cs-check flex items-center justify-center gap-3 py-4 px-6 rounded-xl"
@@ -531,10 +531,10 @@ export default function CareersPage() {
           <p className="text-blue-200 text-xs mt-2.5 text-center" style={{ opacity:0.60 }}>
             One launch email. No marketing lists. Unsubscribe anytime.
           </p>
-        </div>
+        </div> */}
 
         {/* Scroll hint */}
-        <a
+        {/* <a
           href="#roles"
           className="cs-fu cs-d6 mt-6 flex flex-col items-center gap-1.5 text-xs uppercase tracking-widest font-semibold"
           style={{ color:"rgba(165,243,252,0.55)", textDecoration:"none", transition:"color 0.2s" }}
@@ -549,15 +549,15 @@ export default function CareersPage() {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
           </svg>
-        </a>
+        </a> */}
       </section>
 
       {/* ════════════════════════════════
            ROLES PREVIEW
       ════════════════════════════════ */}
       <section id="roles" className="max-w-5xl mx-auto px-4 py-16">
-        {/* Header */}
-        <div className="text-center mb-12 cs-fu">
+     
+        {/* <div className="text-center mb-12 cs-fu">
           <p className="sora text-xs uppercase tracking-[0.16em] text-blue-400 font-semibold mb-2">
             Open Positions
           </p>
@@ -568,10 +568,10 @@ export default function CareersPage() {
             Roles across engineering, cloud, data, consulting, and more are opening
             up when the portal goes live.
           </p>
-        </div>
+        </div> */}
 
         {/* Role chips grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {roles.map((r, i) => (
             <div key={i} className={`cs-role-chip cs-fu cs-d${Math.min(i + 2, 7)}`}>
               <div className="cs-role-emoji">{r.icon}</div>
@@ -582,7 +582,7 @@ export default function CareersPage() {
               <span className="cs-role-count">{r.count} roles</span>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <hr className="cs-rule" />
       </section>
@@ -623,7 +623,7 @@ export default function CareersPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             {/* Email link */}
             <a
-              href="mailto:careers@nexora.com"
+              href="mailto:hr@nexoratechnolpogy.co.in"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm sora font-semibold"
               style={{
                 background:"rgba(255,255,255,0.15)",
@@ -638,7 +638,7 @@ export default function CareersPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              careers@nexora.com
+              hr@nexoratechnolpogy.co.in
             </a>
 
             {/* Contact link */}

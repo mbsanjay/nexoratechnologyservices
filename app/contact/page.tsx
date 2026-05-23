@@ -34,7 +34,7 @@ export default function Contact() {
         </svg>
       ),
       label: "Phone",
-      value: "+91 00,000,000,00",
+      value: "+91 000-000-0000",
     },
     {
       icon: (
@@ -43,7 +43,7 @@ export default function Contact() {
         </svg>
       ),
       label: "Email",
-      value: "info@nexora.com",
+      value: "info@nexoratechnology.co.in",
     },
     {
       icon: (

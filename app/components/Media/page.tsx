@@ -484,15 +484,17 @@ export default function MediaPage() {
         </h1>
 
         {/* Sub-heading */}
-        <p className="fade-up delay-3 text-blue-100 text-base md:text-lg max-w-lg leading-relaxed mb-10"
+        {/* <p className="fade-up delay-3 text-blue-100 text-base md:text-lg max-w-lg leading-relaxed mb-10"
           style={{ opacity:0.85 }}>
           We're building a dedicated hub for press coverage, investor relations,
           financial disclosures, and brand resources. Stay tuned — something
           <em style={{ color:"#a5f3fc", fontStyle:"normal", fontWeight:600 }}> great</em> is coming.
-        </p>
-
+        </p> */}
+<div>
+  <h1 style={{color: "white" }}><b>COMING SOON</b></h1>
+</div>
         {/* ── Countdown ── */}
-        <div className="fade-up delay-4 mb-10">
+        {/* <div className="fade-up delay-4 mb-10">
           <p className="sora text-xs uppercase tracking-[0.18em] text-cyan-300 mb-4 font-semibold">
             Launching in
           </p>
@@ -505,10 +507,10 @@ export default function MediaPage() {
             <span className="count-sep">:</span>
             <CountBox value={timeLeft.seconds} label="Seconds" />
           </div>
-        </div>
+        </div> */}
 
         {/* ── Notify me ── */}
-        <div className="fade-up delay-5 w-full max-w-md mb-6">
+        {/* <div className="fade-up delay-5 w-full max-w-md mb-6">
           {subscribed ? (
             <div
               className="check-anim flex items-center justify-center gap-3 py-3.5 px-6 rounded-xl"
@@ -552,18 +554,18 @@ export default function MediaPage() {
           <p className="text-blue-200 text-xs mt-2.5 opacity-70">
             No spam — just the launch announcement &amp; key updates.
           </p>
-        </div>
+        </div> */}
 
         {/* ── Divider ── */}
-        <div
+        {/* <div
           className="fade-up delay-6"
           style={{ width:60, height:3, borderRadius:2,
             background:"linear-gradient(90deg, rgba(165,243,252,0.5), rgba(255,255,255,0.2))",
             margin:"0 auto 36px" }}
-        />
+        /> */}
 
         {/* ── Scroll cue ── */}
-        <a
+        {/* <a
           href="#whats-coming"
           className="fade-up delay-7 flex flex-col items-center gap-1.5 text-blue-100 text-xs uppercase tracking-widest font-semibold"
           style={{ opacity:0.6, textDecoration:"none", transition:"opacity 0.2s" }}
@@ -575,11 +577,11 @@ export default function MediaPage() {
             fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
           </svg>
-        </a>
+        </a> */}
       </section>
 
       {/* ══════════════════ WHAT'S COMING ══════════════════ */}
-      <section id="whats-coming" className="max-w-5xl mx-auto px-4 py-16">
+      {/* <section id="whats-coming" className="max-w-5xl mx-auto px-4 py-16">
         <div className="text-center mb-12 fade-up">
           <p className="sora text-xs uppercase tracking-[0.16em] text-blue-400 font-semibold mb-2">
             What to Expect
@@ -599,7 +601,7 @@ export default function MediaPage() {
               <div className="feature-icon">{item.icon}</div>
               <h3 className="sora text-[#1e3a5f] font-bold text-base mb-2">{item.title}</h3>
               <p className="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
-              {/* Coming soon chip */}
+              
               <div
                 className="mt-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold"
                 style={{
@@ -615,10 +617,10 @@ export default function MediaPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════ MEDIA CONTACT ══════════════════ */}
-      <section className="max-w-5xl mx-auto px-4 pb-16">
+      {/* <section className="max-w-5xl mx-auto px-4 pb-16">
         <div
           className="rounded-2xl px-8 py-10 text-center scale-in"
           style={{
@@ -690,7 +692,7 @@ export default function MediaPage() {
             </a>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ══════════════════ FOOTER ══════════════════ */}
       <footer

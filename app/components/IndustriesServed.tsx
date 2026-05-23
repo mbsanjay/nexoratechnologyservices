@@ -290,11 +290,11 @@ export default function IndustriesServed() {
                   </div>
                 ))}
                 {/* stat tile */}
-                <div className="flex flex-col items-center justify-center gap-1 rounded-2xl py-4 px-2"
+                {/* <div className="flex flex-col items-center justify-center gap-1 rounded-2xl py-4 px-2"
                   style={{ background: "linear-gradient(135deg,rgba(26,111,196,0.5),rgba(23,184,224,0.3))", border: "1.5px solid rgba(255,255,255,0.3)" }}>
                   <p className="sora text-white text-2xl" style={{ fontWeight: 800 }}>7+</p>
                   <p className="text-cyan-200 text-center leading-tight" style={{ fontSize: "10px" }}>Industries</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -354,11 +354,11 @@ export default function IndustriesServed() {
               <p className="sora text-xs font-bold text-[#1a6fc4] mb-0.5">500+ Projects</p>
               <p className="text-slate-500 text-[11px]">Across Industries</p>
             </div> */}
-            <div className="float-badge"
+            {/* <div className="float-badge"
               style={{ top: 20, left: "5%", animationDelay: "0.6s", background: "linear-gradient(135deg,#1a6fc4,#17b8e0)" }}>
               <p className="sora text-xs font-bold text-white mb-0.5">7 Sectors</p>
               <p className="text-cyan-100 text-[11px]">Deep Expertise</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
