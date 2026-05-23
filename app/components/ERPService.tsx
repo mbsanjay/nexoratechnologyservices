@@ -181,7 +181,7 @@ export default function ERPService() {
           HERO
       ═══════════════════════════════ */}
       <section
-        className="relative overflow-hidden py-24 px-4"
+        className="relative overflow-hidden py-14 md:py-24 px-4"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 45%, #1a9fd4 80%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 440, height: 440, top: -140, right: -90, opacity: 0.15 }} />
@@ -247,8 +247,8 @@ export default function ERPService() {
       {/* ═══════════════════════════════
           INTRO + IMAGES
       ═══════════════════════════════ */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+      <section className="py-10 md:py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 
           {/* Left: text */}
           <div className="flex-1 fade-left">
@@ -278,7 +278,7 @@ export default function ERPService() {
           </div>
 
           {/* Right: images */}
-          <div className="flex-1 fade-right relative flex justify-center" style={{ minHeight: 460 }}>
+          <div className="img-stack-wrapper flex-1 fade-right relative flex justify-center overflow-hidden" style={{ minHeight: 280 }}>
             <div className="deco-ring" style={{ width: 380, height: 380, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
             <div className="deco-ring" style={{ width: 270, height: 270, top: "50%", left: "50%", transform: "translate(-50%,-50%)", animationDirection: "reverse", opacity: 0.55 }} />
 
@@ -308,9 +308,9 @@ export default function ERPService() {
       {/* ═══════════════════════════════
           SERVICES — alternating layout
       ═══════════════════════════════ */}
-      <section className="py-20 px-4 bg-[#f4f8fd]">
+      <section className="py-10 md:py-20 px-4 bg-[#f4f8fd]">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14 fade-up">
+          <div className="text-center mb-10 md:mb-14 fade-up">
             <div className="section-label" style={{ margin: "0 auto 14px" }}>What We Offer</div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
               Our ERP Service Areas
@@ -323,7 +323,7 @@ export default function ERPService() {
           <div className="flex flex-col gap-5">
             {services.map((svc, i) => (
               <div key={svc.title} className={`svc-card fade-up d${(i % 5) + 1}`}>
-                <div className="flex flex-col md:flex-row gap-6 p-8 items-start">
+                <div className="flex flex-col md:flex-row gap-5 p-5 md:p-8 items-start">
                   {/* Icon + title */}
                   <div className="flex-shrink-0 flex flex-col items-center md:items-start gap-3 w-full md:w-48">
                     <div className="svc-icon">{svc.icon}</div>
@@ -354,8 +354,8 @@ export default function ERPService() {
       {/* ═══════════════════════════════
           SECOND IMAGE STRIP
       ═══════════════════════════════ */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16 items-center">
+      <section className="py-10 md:py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
 
           {/* Left: points */}
           <div className="flex-1 fade-left">
@@ -390,7 +390,7 @@ export default function ERPService() {
           </div>
 
           {/* Right: images */}
-          <div className="flex-1 fade-right relative flex justify-center" style={{ minHeight: 420 }}>
+          <div className="img-stack-wrapper flex-1 fade-right relative flex justify-center overflow-hidden" style={{ minHeight: 260 }}>
             <div className="deco-ring" style={{ width: 340, height: 340, top: "50%", left: "50%", transform: "translate(-50%,-50%)" }} />
 
             <div className="img-main" style={{ width: 340, height: 260, marginTop: 50 }}>
@@ -420,7 +420,7 @@ export default function ERPService() {
           CTA
       ═══════════════════════════════ */}
       <section
-        className="py-20 px-4 relative overflow-hidden"
+        className="py-12 md:py-20 px-4 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #0a1e3d 0%, #1a6fc4 60%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 300, height: 300, top: -100, right: -60, opacity: 0.12 }} />

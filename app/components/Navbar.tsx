@@ -82,7 +82,7 @@ export default function Navbar() {
         { name: "Working @ NTS", href: "/components/WorkingAtNTS" },
       ],
     },
-    { label: "Careers", href: "/components/Careers" },
+    // { label: "Careers", href: "/components/Careers" },
     { label: "Contact Us", href: "/contact" },
   ];
 

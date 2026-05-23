@@ -362,7 +362,7 @@ export default function Home() {
       {/* ══════════════════════════════
           HERO SLIDER
       ══════════════════════════════ */}
-      <section className="w-full h-[600px] relative overflow-hidden">
+      <section className="w-full relative overflow-hidden" style={{ height: "clamp(420px, 65vh, 600px)" }}>
         {images.map((img, i) => (
           <div key={i} className="absolute inset-0 transition-opacity duration-1000"
             style={{ opacity: i === current ? 1 : 0 }}>
@@ -442,7 +442,7 @@ export default function Home() {
       {/* ══════════════════════════════
           INTRO BANNER
       ══════════════════════════════ */}
-      <section className="w-full py-16 px-4" style={{ background: "white" }}>
+      <section className="w-full py-10 md:py-16 px-4" style={{ background: "white" }}>
         <div className="max-w-4xl mx-auto text-center fade-up">
           <div className="section-label mx-auto w-fit">Who We Are</div>
           <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f] mb-6 leading-snug" style={{ fontWeight: 800 }}>
@@ -478,10 +478,10 @@ export default function Home() {
       {/* ══════════════════════════════
           CORE SERVICES
       ══════════════════════════════ */}
-      <section className="w-full max-w-6xl mx-auto py-20 px-4">
-        <div className="text-center mb-14 fade-up">
+      <section className="w-full max-w-6xl mx-auto py-10 md:py-20 px-4">
+        <div className="text-center mb-10 md:mb-14 fade-up">
           <div className="section-label mx-auto w-fit">Core Services</div>
-          <h2 className="sora text-4xl md:text-5xl text-[#1e3a5f] mb-4" style={{ fontWeight: 800 }}>
+          <h2 className="sora text-3xl md:text-5xl text-[#1e3a5f] mb-4" style={{ fontWeight: 800 }}>
             What We{" "}
             <span style={{
               background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
@@ -520,11 +520,11 @@ export default function Home() {
       {/* ══════════════════════════════
           HOW WE WORK — PROCESS
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
+      <section className="w-full py-10 md:py-20 px-4" style={{ background: "white" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 fade-up">
+          <div className="text-center mb-10 md:mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Our Process</div>
-            <h2 className="sora text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
+            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
               How We{" "}
               <span style={{
                 background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
@@ -537,7 +537,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
             {[
               { step: "01", title: "Discovery", desc: "We dive deep into your business goals, challenges, and requirements." },
               { step: "02", title: "Planning", desc: "We craft a detailed roadmap, architecture, and sprint plan." },
@@ -557,8 +557,8 @@ export default function Home() {
       {/* ══════════════════════════════
           ABOUT — TEXT LEFT, IMAGE RIGHT
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "#f4f8fd" }}>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="w-full py-10 md:py-20 px-4" style={{ background: "#f4f8fd" }}>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Left — Text */}
           <div className="fade-left">
@@ -626,7 +626,7 @@ export default function Home() {
           </div>
 
           {/* Right — Image */}
-          <div className="fade-right relative flex justify-center">
+          <div className="fade-right relative flex justify-center overflow-hidden">
             <div className="relative w-full max-w-md">
               <div className="about-deco-ring" style={{ width: 340, height: 340, top: -30, right: -30, zIndex: 0 }} />
               <div className="about-deco-ring" style={{ width: 200, height: 200, bottom: -20, left: -20, zIndex: 0, animationDirection: "reverse", borderColor: "rgba(23,184,224,0.2)" }} />
@@ -673,11 +673,11 @@ export default function Home() {
       {/* ══════════════════════════════
           WHY CHOOSE US
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
+      <section className="w-full py-10 md:py-20 px-4" style={{ background: "white" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 fade-up">
+          <div className="text-center mb-10 md:mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Why Nexora</div>
-            <h2 className="sora text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
+            <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
               The Nexora{" "}
               <span style={{
                 background: "linear-gradient(135deg, #1a6fc4, #17b8e0)",
@@ -761,7 +761,7 @@ export default function Home() {
       {/* ══════════════════════════════
           CTA BANNER
       ══════════════════════════════ */}
-      <section className="cta-section w-full py-20 px-4">
+      <section className="cta-section w-full py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="section-label mx-auto w-fit mb-4"
             style={{ background: "rgba(255,255,255,0.15)", border: "1px solid rgba(255,255,255,0.3)", color: "white" }}>
@@ -795,9 +795,9 @@ export default function Home() {
       {/* ══════════════════════════════
           FOOTER
       ══════════════════════════════ */}
-      <footer className="w-full py-14 px-4" style={{ background: "linear-gradient(135deg, #0a1e3d, #0f3460)" }}>
+      <footer className="w-full py-10 md:py-14 px-4" style={{ background: "linear-gradient(135deg, #0a1e3d, #0f3460)" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mb-8 md:mb-10">
             <div className="md:col-span-2">
               <h3 className="sora text-white text-xl mb-3" style={{ fontWeight: 800 }}>Nexora</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-4 max-w-xs">

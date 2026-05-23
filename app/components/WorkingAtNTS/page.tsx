@@ -364,11 +364,20 @@ export default function WorkingAtNTSPage() {
           animation:waveOut 3s ease-out infinite;
           pointer-events:none;
         }
+
+        /* ── Mobile fixes ── */
+        @media (max-width: 480px) {
+          .count-box { width: 62px !important; padding: 10px 4px 8px !important; }
+          .count-num { font-size: 1.7rem !important; }
+          .count-sep { font-size: 1.6rem !important; }
+          .notify-input { padding: 11px 14px; }
+          .notify-btn   { padding: 11px 14px; }
+        }
       `}</style>
 
       {/* ══════════════ HERO ══════════════ */}
       <section
-        className="relative overflow-hidden flex flex-col items-center text-center px-4 py-24"
+        className="relative overflow-hidden flex flex-col items-center text-center px-4 py-14 md:py-24"
         style={{
           background:"linear-gradient(140deg,#0d2d55 0%,#1a6fc4 30%,#1e80d8 60%,#17b8e0 100%)",
           minHeight:"100vh",
@@ -599,8 +608,8 @@ export default function WorkingAtNTSPage() {
       </section>
 
       {/* ══════════════ PERKS ══════════════ */}
-      <section id="perks" className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-12 fade-up">
+      <section id="perks" className="max-w-6xl mx-auto px-4 py-10 md:py-16">
+        <div className="text-center mb-8 md:mb-12 fade-up">
           <p className="sora text-xs uppercase tracking-[0.16em] text-blue-400 font-semibold mb-2">
             Why NTS?
           </p>
@@ -650,7 +659,7 @@ export default function WorkingAtNTSPage() {
 
       {/* ══════════════ HIRING PROCESS ══════════════ */}
       <section
-        className="py-16 px-4"
+        className="py-10 md:py-16 px-4"
         style={{
           background:"linear-gradient(135deg,#0f3460 0%,#1a6fc4 40%,#17b8e0 100%)",
         }}
@@ -703,9 +712,9 @@ export default function WorkingAtNTSPage() {
       </section>
 
       {/* ══════════════ CONTACT / CTA BANNER ══════════════ */}
-      <section className="max-w-5xl mx-auto px-4 py-16">
+      <section className="max-w-5xl mx-auto px-4 py-10 md:py-16">
         <div
-          className="rounded-2xl px-8 py-10 text-center scale-in"
+          className="rounded-2xl px-5 py-8 md:px-8 md:py-10 text-center scale-in"
           style={{
             background:"linear-gradient(135deg,#1a6fc4 0%,#1e80d8 50%,#17b8e0 100%)",
             boxShadow:"0 20px 60px rgba(26,111,196,0.30)",

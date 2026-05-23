@@ -279,7 +279,7 @@ export default function Contact() {
 
       {/* ── Hero Banner ── */}
       <section
-        className="relative overflow-hidden py-16 px-4"
+        className="relative overflow-hidden py-10 md:py-16 px-4"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 45%, #1a9fd4 80%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 320, height: 320, top: -80, right: -80, opacity: 0.15 }} />
@@ -307,8 +307,8 @@ export default function Contact() {
       </section>
 
       {/* ── Contact Form + Info ── */}
-      <section className="max-w-5xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+      <section className="max-w-5xl mx-auto px-4 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 items-start">
 
           {/* Left: Info Panel */}
           <div className="lg:col-span-2 fade-left delay-1">
@@ -377,7 +377,7 @@ export default function Contact() {
           {/* Right: Form */}
           <div className="lg:col-span-3 scale-in delay-2">
             <div
-              className="bg-white rounded-2xl p-8"
+              className="bg-white rounded-2xl p-5 md:p-8"
               style={{ boxShadow: "0 8px 40px rgba(26,111,196,0.10), 0 2px 8px rgba(0,0,0,0.04)" }}
             >
               <h2 className="sora text-2xl text-[#1e3a5f] mb-1" style={{ fontWeight: 700 }}>

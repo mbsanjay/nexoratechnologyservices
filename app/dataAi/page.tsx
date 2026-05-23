@@ -116,7 +116,7 @@ export default function DataAI() {
           HERO
       ═══════════════════════════════ */}
       <section
-        className="relative overflow-hidden py-24 px-4"
+        className="relative overflow-hidden py-14 md:py-24 px-4"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 45%, #1a9fd4 80%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 440, height: 440, top: -140, right: -90, opacity: 0.15 }} />
@@ -183,10 +183,10 @@ export default function DataAI() {
       {/* ═══════════════════════════════
           PLATFORMS & TOOLS
       ═══════════════════════════════ */}
-      <section className="py-16 px-4 bg-[#f4f8fd]">
+      <section className="py-10 md:py-16 px-4 bg-[#f4f8fd]">
         <div className="max-w-6xl mx-auto">
 
-          <div className="text-center mb-12 fade-up">
+          <div className="text-center mb-8 md:mb-12 fade-up">
             <div className="section-label" style={{ margin: "0 auto 14px" }}>Platforms &amp; Tools</div>
             <h2 className="sora text-3xl md:text-4xl text-[#1e3a5f]" style={{ fontWeight: 800 }}>
               KNIME and Similar Data Analytics &amp; AI Tools

@@ -317,7 +317,7 @@ export default function About() {
           HERO BANNER
       ══════════════════════════════ */}
       <section
-        className="relative overflow-hidden py-20 px-4"
+        className="relative overflow-hidden py-12 md:py-20 px-4"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 45%, #1a9fd4 80%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 380, height: 380, top: -120, right: -80, opacity: 0.15 }} />
@@ -356,8 +356,8 @@ export default function About() {
       {/* ══════════════════════════════
           MISSION + IMAGE SPLIT
       ══════════════════════════════ */}
-      <section className="w-full max-w-6xl mx-auto py-20 px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="w-full max-w-6xl mx-auto py-10 md:py-20 px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Left: Text */}
           <div className="fade-left">
@@ -381,7 +381,7 @@ export default function About() {
 
             {/* Tab switcher */}
             <div
-              className="flex gap-2 mb-6 p-1.5 rounded-full w-fit flex-wrap"
+              className="flex gap-2 mb-6 p-1.5 rounded-full w-fit flex-wrap max-w-full"
               style={{ background: "#f0f6ff", border: "1px solid #dbe8f8" }}
             >
               {tabs.map((t, i) => (
@@ -425,9 +425,9 @@ export default function About() {
           </div>
 
           {/* Right: Stacked images */}
-          <div className="fade-right flex justify-center">
+          <div className="fade-right flex justify-center overflow-hidden">
             <div className="img-stack">
-              {/* Deco rings */}
+              {/* Deco rings — hidden on mobile via globals.css .deco-ring rule */}
               <div className="deco-ring" style={{ width: 360, height: 360, top: -30, right: -30, zIndex: 0 }} />
               <div className="deco-ring" style={{ width: 180, height: 180, bottom: 60, left: -20, zIndex: 0, animationDirection: "reverse" }} />
 
@@ -446,9 +446,9 @@ export default function About() {
                   className="w-full h-full object-cover" />
               </div>
 
-              {/* Floating badge top-right */}
+              {/* Floating badge top-right — hidden on mobile */}
               <div
-                className="absolute z-10 bg-white rounded-2xl px-4 py-3 orb-float"
+                className="hidden md:block absolute z-10 bg-white rounded-2xl px-4 py-3 orb-float"
                 style={{
                   top: 20, right: -20,
                   boxShadow: "0 10px 32px rgba(26,111,196,0.18)",
@@ -459,9 +459,9 @@ export default function About() {
                 <p className="text-slate-400" style={{ fontSize: "10px" }}>9001:2015</p>
               </div>
 
-              {/* Floating badge bottom-right */}
+              {/* Floating badge bottom-right — hidden on mobile */}
               <div
-                className="absolute z-10 bg-white rounded-2xl px-4 py-3 orb-float-2"
+                className="hidden md:block absolute z-10 bg-white rounded-2xl px-4 py-3 orb-float-2"
                 style={{
                   bottom: 80, right: -28,
                   boxShadow: "0 10px 32px rgba(26,111,196,0.18)",
@@ -484,9 +484,9 @@ export default function About() {
       {/* ══════════════════════════════
           OUR VALUES — 6 GRID
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
+      <section className="w-full py-10 md:py-20 px-4" style={{ background: "white" }}>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14 fade-up">
+          <div className="text-center mb-10 md:mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Core Values</div>
             <h2 className="sora text-4xl font-800 text-[#1e3a5f] mt-2" style={{ fontWeight: 800 }}>
               What We Stand For
@@ -576,9 +576,9 @@ export default function About() {
       {/* ══════════════════════════════
           TEAM
       ══════════════════════════════ */}
-      <section className="w-full py-20 px-4" style={{ background: "white" }}>
+      <section className="w-full py-10 md:py-20 px-4" style={{ background: "white" }}>
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 fade-up">
+          <div className="text-center mb-10 md:mb-14 fade-up">
             <div className="section-label mx-auto w-fit">Leadership</div>
             <h2 className="sora text-4xl font-800 text-[#1e3a5f] mt-2" style={{ fontWeight: 800 }}>
               Meet the Team
@@ -617,7 +617,7 @@ export default function About() {
           CTA BANNER
       ══════════════════════════════ */}
       <section
-        className="w-full py-20 px-4 relative overflow-hidden"
+        className="w-full py-12 md:py-20 px-4 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #1a6fc4 0%, #1e80d8 50%, #17b8e0 100%)" }}
       >
         <div className="geo-ring" style={{ width: 400, height: 400, top: -150, right: -80, opacity: 0.12 }} />

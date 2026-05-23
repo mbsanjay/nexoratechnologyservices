@@ -315,7 +315,7 @@ export default function CareersPage() {
            HERO — full-screen
       ════════════════════════════════ */}
       <section
-        className="relative flex flex-col items-center justify-center text-center px-4 overflow-hidden"
+        className="relative flex flex-col items-center justify-center text-center px-4 py-16 md:py-0 overflow-hidden"
         style={{
           minHeight: "100vh",
           background: "linear-gradient(150deg,#071e3d 0%,#0f3460 20%,#1a6fc4 55%,#17b8e0 100%)",
@@ -592,7 +592,7 @@ export default function CareersPage() {
       ════════════════════════════════ */}
       <section className="max-w-5xl mx-auto px-4 pb-16">
         <div
-          className="rounded-2xl px-8 py-12 text-center cs-si"
+          className="rounded-2xl px-5 py-8 md:px-8 md:py-12 text-center cs-si"
           style={{
             background:"linear-gradient(135deg,#0f3460 0%,#1a6fc4 45%,#17b8e0 100%)",
             boxShadow:"0 22px 60px rgba(26,111,196,0.32)",
@@ -638,7 +638,7 @@ export default function CareersPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              hr@nexoratechnolpogy.co.in
+              <span style={{ wordBreak: "break-all" }}>hr@nexoratechnolpogy.co.in</span>
             </a>
 
             {/* Contact link */}

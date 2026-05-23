@@ -19,6 +19,10 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   overflow-x: hidden;
   max-width: 100%;
@@ -28,4 +32,69 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES (< 768px)
+   Prevents decorative absolute-positioned
+   elements from causing horizontal scroll
+═══════════════════════════════════════════ */
+@media (max-width: 767px) {
+
+  /* ── Image stack decorative elements ── */
+  .img-accent,
+  .float-badge,
+  .deco-ring,
+  .about-deco-ring {
+    display: none !important;
+  }
+
+  /* ── Make main images fill container ── */
+  .img-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 220px !important;
+    margin-top: 0 !important;
+  }
+
+  /* ── Image stack wrapper: collapse height ── */
+  .img-stack-wrapper {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* ── Process step connector lines ── */
+  .process-step::after {
+    display: none !important;
+  }
+
+  /* ── CTA section inner padding ── */
+  .cs-email-wrap {
+    flex-direction: column;
+  }
+  .cs-email-input {
+    border-radius: 10px 10px 0 0;
+  }
+  .cs-email-btn {
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+  }
+}
+
+/* Countdown boxes – smaller on very narrow screens */
+@media (max-width: 400px) {
+  .cs-count-box,
+  .count-box {
+    width: 60px !important;
+    padding: 10px 4px 8px !important;
+  }
+  .cs-count-num,
+  .count-num {
+    font-size: 1.65rem !important;
+  }
+  .cs-sep,
+  .count-sep {
+    font-size: 1.5rem !important;
+  }
 }
