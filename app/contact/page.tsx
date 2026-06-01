@@ -52,7 +52,7 @@ export default function Contact() {
         </svg>
       ),
       label: "Business Hours",
-      value: "Mon–Fri: 9AM–6PM  |  Sat: 10AM–3PM",
+      value: "Mon–Fri: 9AM–6PM ",
     },
   ];
 

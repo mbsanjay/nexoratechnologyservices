@@ -45,7 +45,7 @@ const industries = [
   },
   {
     icon: "✈️",
-    title: "Airways IT Services",
+    title: "Aviation",
     badge: null,
     desc: "Providing specialized IT services for the aviation sector including operations management, passenger systems, and compliance tools.",
   },
@@ -277,14 +277,14 @@ export default function IndustriesServed() {
 
             {/* Right: count + industry icons strip */}
             <div className="fade-right hidden lg:block d2">
-              <div className="grid grid-cols-4 gap-3 mb-4">
+              <div className="grid grid-cols-2 gap-3 mb-3">
                 {industries.slice(0, 4).map((ind, i) => (
                   <div key={i}
-                    className="flex flex-col items-center justify-center gap-2 rounded-2xl py-4 px-2"
+                    className="flex flex-col items-center justify-center gap-2 rounded-2xl py-4 px-3"
                     style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)" }}>
                     <span className="text-3xl">{ind.icon}</span>
-                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "10px", fontWeight: 700 }}>
-                      {ind.title.split(" ").slice(0, 2).join(" ")}
+                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "11px", fontWeight: 700 }}>
+                      {ind.title}
                     </p>
                   </div>
                 ))}
@@ -295,8 +295,8 @@ export default function IndustriesServed() {
                     className="flex flex-col items-center justify-center gap-2 rounded-2xl py-4 px-2"
                     style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.18)" }}>
                     <span className="text-3xl">{ind.icon}</span>
-                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "10px", fontWeight: 700 }}>
-                      {ind.title.split(" ").slice(0, 2).join(" ")}
+                    <p className="sora text-white text-center leading-tight" style={{ fontSize: "11px", fontWeight: 700 }}>
+                      {ind.title}
                     </p>
                   </div>
                 ))}

@@ -3,7 +3,7 @@
 const leaders = [
   {
     name: "Venkatesh Gothe",
-    title: "CEO & Founder",
+    title: "Founder & CEO",
     color: "#1a6fc4",
     bg: "linear-gradient(145deg, #dbeafe 0%, #e0f2fe 100%)",
   },
@@ -267,7 +267,7 @@ export default function About() {
         }}
       >
         <p className="sora">
-          © 2024 Nexora Technology Services Pvt. Ltd. All rights reserved.
+          © 2026 Nexora Technology Services Pvt. Ltd. All rights reserved.
         </p>
       </footer>
     </div>
