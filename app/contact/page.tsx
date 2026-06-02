@@ -34,7 +34,7 @@ export default function Contact() {
         </svg>
       ),
       label: "Phone",
-      value: "+91 000-000-0000",
+      value: "+91 9886071933",
     },
     {
       icon: (
